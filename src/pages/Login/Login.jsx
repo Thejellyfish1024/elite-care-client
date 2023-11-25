@@ -1,14 +1,32 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useForm } from 'react-hook-form';
 import logo from '../../assets/elite-care-logo.png'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
+import toast from 'react-hot-toast';
+import GoogleSigning from '../Shared/socialSignings/GoogleSigning';
 
 const Login = () => {
+
+    const {signInUser} = useAuth();
+    const navigate = useNavigate();
 
     const { register, handleSubmit, formState: { errors } } = useForm()
 
     const onSubmit = (data) => {
         console.log(data)
+
+        signInUser(data.email, data.password)
+            .then(result => {
+                console.log(result.user);
+                toast.success('Successfully logged in')
+
+                navigate(location?.state || '/')
+            })
+            .catch(error =>{
+                console.log(error);
+                toast.error(`${error.message}`)
+            })
     }
     return (
         <div className=' min-h-screen md:p-16 lg:p-0 lg:pt-16 bg-[#f0ead2]'>
@@ -35,12 +53,15 @@ const Login = () => {
                                 {errors.password && <span className='text-red-500'>Password is required</span>}
                             </div>
                             <div className='text-center mt-10'>
-                                <button className='bg-[#52b788] w-full p-2 text-white font-bold rounded-full'>
+                                <button className='hover:bg-[#52b788] bg-green-800 w-full p-2 text-white font-bold rounded-full'>
                                     Login
                                 </button>
                             </div>
                         </form>
                         <p className='text-center mt-4'>Don't have an account ? <span className='text-red-600'><Link to={'/register'}>Register</Link> </span>now</p>
+                        <div>
+                            <GoogleSigning></GoogleSigning>
+                        </div>
                     </div>
                 </div>
             </div>

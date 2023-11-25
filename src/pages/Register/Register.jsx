@@ -1,9 +1,11 @@
+/* eslint-disable no-useless-escape */
 /* eslint-disable react/no-unescaped-entities */
 import { useForm } from "react-hook-form";
 import logo from '../../assets/elite-care-logo.png'
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import toast from "react-hot-toast";
+import GoogleSigning from "../Shared/socialSignings/GoogleSigning";
 const Register = () => {
 
     const navigate = useNavigate()
@@ -14,6 +16,10 @@ const Register = () => {
 
     const onSubmit = (data) => {
         console.log(data)
+
+        if(!/^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\/\|]).{6,}$/.test(data?.password)){
+            return toast.error('Password have to be minimum 6 characters . It should include capital letter and special character')
+        }
         createUser(data.email, data.password)
         .then(result => {
             console.log(result.user);
@@ -63,12 +69,15 @@ const Register = () => {
                                 {errors.password && <span className='text-red-500'>Password is required</span>}
                             </div>
                             <div className='text-center mt-10'>
-                                <button className='bg-[#52b788] w-full p-2 text-white font-bold rounded-full'>
+                                <button className='hover:bg-[#52b788] bg-green-800 w-full p-2 text-white font-bold rounded-full'>
                                     Register
                                 </button>
                             </div>
                         </form>
                         <p className='text-center mt-4'>Already have an account ? <span className='text-red-600'><Link to={'/login'}>Login</Link> </span>now</p>
+                        <div>
+                            <GoogleSigning></GoogleSigning>
+                        </div>
                     </div>
                 </div>
             </div>
