@@ -1,13 +1,33 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useForm } from "react-hook-form";
 import logo from '../../assets/elite-care-logo.png'
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
+import toast from "react-hot-toast";
 const Register = () => {
+
+    const navigate = useNavigate()
+
+    const {createUser, updateUserProfile, logOut} = useAuth()
 
     const { register, handleSubmit, formState: { errors } } = useForm()
 
     const onSubmit = (data) => {
         console.log(data)
+        createUser(data.email, data.password)
+        .then(result => {
+            console.log(result.user);
+            updateUserProfile(data.name, data.email)
+            logOut()
+            toast.success('User Created Successfully')
+
+            navigate('/login')
+
+        })
+        .catch(error => {
+            console.log(error);
+            toast.error(`${error.message}`)
+        })
     }
 
     return (
@@ -44,7 +64,7 @@ const Register = () => {
                             </div>
                             <div className='text-center mt-10'>
                                 <button className='bg-[#52b788] w-full p-2 text-white font-bold rounded-full'>
-                                    Login
+                                    Register
                                 </button>
                             </div>
                         </form>
