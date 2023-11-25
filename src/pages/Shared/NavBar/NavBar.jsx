@@ -4,7 +4,7 @@ import { Button } from '@mui/material';
 
 const NavBar = () => {
     const navLinks = <>
-        <ul className="  text-white flex gap-5">
+        <ul className="  text-white flex md:gap-5 gap-2">
             <li><NavLink className={({ isActive }) => isActive ? "text-[#48cae4] border-b-2 p-1 border-[#48cae4] font-bold" : "font-bold p-1"}
                 to='/'>Home</NavLink></li>
             <li><NavLink className={({ isActive }) => isActive ? "text-[#48cae4] border-b-2 p-1 border-[#48cae4]  font-bold" : " p-1"}
@@ -22,12 +22,17 @@ const NavBar = () => {
                     <img src={logo} className='w-12 h-12 rounded-full' alt="" />
                     <h2 className='text-2xl font-bold italic'>Elite Care</h2>
                 </div>
-                <div>
+                <div className='hidden lg:block'>
                     {navLinks}
                 </div>
                 <div>
                     <Link to='/login'><Button variant="outlined" sx={{color: '#48cae4', borderColor: '#48cae4'}}>Login</Button></Link>
                 </div>
+            </div>
+            <div className='mt-4 lg:hidden flex justify-center'>
+                {
+                    navLinks
+                }
             </div>
         </div>
     );
