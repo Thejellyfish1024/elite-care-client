@@ -6,6 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import toast from "react-hot-toast";
 import GoogleSigning from "../Shared/socialSignings/GoogleSigning";
+import { Helmet } from "react-helmet-async";
 const Register = () => {
 
     const navigate = useNavigate()
@@ -38,11 +39,14 @@ const Register = () => {
 
     return (
         <div className=' min-h-screen md:p-16 lg:p-0 lg:pt-16 bg-[#f0ead2]'>
+            <Helmet>
+                <title>Elite Care || Register</title>
+            </Helmet>
             <div className="flex flex-col-reverse lg:flex-row max-w-7xl mx-auto bg-[#b7e4c7] rounded-lg">
-                <div className="lg:w-2/3">
+                <div className="lg:w-3/5">
                     <img className='rounded-l-lg h-full hidden md:block' src="https://www.froedtert.com/sites/default/files/styles/one_column/public/image/2018-09/be-an-engaged-health-care-consumer.jpg" alt="" />
                 </div>
-                <div className='lg:w-1/3 p-10'>
+                <div className='lg:w-2/5 p-10'>
                     <div className='flex gap-3 items-center justify-center'>
                         <img src={logo} className='w-20 h-20  rounded-full' alt="" />
                         <h2 className='text-3xl font-bold italic text-[#52b788]'>Elite Care</h2>

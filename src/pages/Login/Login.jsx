@@ -5,6 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import toast from 'react-hot-toast';
 import GoogleSigning from '../Shared/socialSignings/GoogleSigning';
+import { Helmet } from 'react-helmet-async';
 
 const Login = () => {
 
@@ -30,6 +31,9 @@ const Login = () => {
     }
     return (
         <div className=' min-h-screen md:p-16 lg:p-0 lg:pt-16 bg-[#f0ead2]'>
+            <Helmet>
+                <title>Elite Care || Login</title>
+            </Helmet>
             <div className="flex flex-col-reverse lg:flex-row max-w-7xl mx-auto bg-[#b7e4c7] rounded-lg">
                 <div className="lg:w-2/3">
                     <img className='rounded-l-lg h-full hidden md:block' src="https://www.froedtert.com/sites/default/files/styles/one_column/public/image/2018-09/be-an-engaged-health-care-consumer.jpg" alt="" />
