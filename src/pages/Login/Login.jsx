@@ -1,5 +1,7 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useForm } from 'react-hook-form';
 import logo from '../../assets/elite-care-logo.png'
+import { Link } from 'react-router-dom';
 
 const Login = () => {
 
@@ -38,6 +40,7 @@ const Login = () => {
                                 </button>
                             </div>
                         </form>
+                        <p className='text-center mt-4'>Don't have an account ? <span className='text-red-600'><Link to={'/register'}>Register</Link> </span>now</p>
                     </div>
                 </div>
             </div>
