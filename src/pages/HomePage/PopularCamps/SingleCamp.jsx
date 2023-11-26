@@ -1,11 +1,13 @@
 /* eslint-disable react/prop-types */
 
+import { Link } from "react-router-dom";
+
 
 const SingleCamp = ({ camp }) => {
     const { campName, scheduledDateTime, specializedServicesProvided, healthcareProfessionalsInAttendance, targetAudience, campFees, venue } = camp
     return (
         <div className="flex justify-center p-2 md:p-0">
-            <div className="lg:w-4/5 text-white mt-10 bg-gradient-to-r md:w-3/5">
+            <div className="lg:w-4/5 text-white bg-gradient-to-r md:w-3/5">
                 <h2 className=" bg-gradient-to-r from-[#f48c06] to-[#faa307] p-3 md:text-xl text-lg uppercase rounded-t-full font-bold text-center">
                     {campName}
                 </h2>
@@ -43,10 +45,12 @@ const SingleCamp = ({ camp }) => {
                 <div className="bg-gray-600 py-3 -mt-12">
                     <p className="md:pl-5 pl-2 font-bold">Camp Fee : ${campFees}</p>
                 </div>
-                <button type="button" className="bg-gradient-to-r hover:from-green-400 hover:to-blue-500 from-pink-500 to-yellow-500
-                w-full text-center font-bold py-2 rounded-b-full">
-                    See Camp Details
-                </button>
+                <Link to={`/camp-details`}>
+                    <button type="button" className="bg-gradient-to-r hover:from-green-400 hover:to-blue-500 from-pink-500 to-yellow-500
+                w-full text-center font-bold py-4 rounded-b-full">
+                        See Camp Details
+                    </button>
+                </Link>
             </div>
         </div>
     );
