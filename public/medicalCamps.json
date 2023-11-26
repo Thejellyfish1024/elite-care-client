@@ -1,0 +1,91 @@
+[
+    {
+      "campName": "Heart Health Awareness Camp",
+      "image": "heart_health_image.jpg",
+      "campFees": 10,
+      "scheduledDateTime": "2023-02-15, 09:00:00",
+      "venue": "City Community Center",
+      "specializedServicesProvided": ["Cardiac Consultation", "Blood Pressure Check", "Cholesterol Screening"],
+      "healthcareProfessionalsInAttendance": [
+        {"doctorName": "Dr. Smith", "specialty": "Cardiologist"},
+        {"doctorName": "Dr. Johnson", "specialty": "Cardiac Nurse"},
+        {"doctorName": "Dr. Davis", "specialty": "Nutritionist"}
+      ],
+      "targetAudience": "Adults aged 40 and above",
+      "description": "Join us to learn about heart health, get personalized consultations, and take proactive steps towards a healthy heart."
+    },
+    {
+      "campName": "Pediatric Immunization Drive",
+      "image": "pediatric_immunization_image.jpg",
+      "campFees": 20,
+      "scheduledDateTime": "2023-03-10, 11:30:00",
+      "venue": "Community Health Clinic",
+      "specializedServicesProvided": ["Childhood Vaccinations", "Pediatric Consultations"],
+      "healthcareProfessionalsInAttendance": [
+        {"doctorName": "Dr. Miller", "specialty": "Pediatrician"},
+        {"doctorName": "Dr. Baker", "specialty": "Pediatric Nurse"}
+      ],
+      "targetAudience": "Parents with infants and young children",
+      "description": "Ensure your child's health with free vaccinations and expert advice from our pediatric specialists."
+    },
+    {
+      "campName": "Diabetes Management Workshop",
+      "image": "diabetes_management_image.jpg",
+      "campFees": 5,
+      "scheduledDateTime": "2023-04-20, 14:00:00",
+      "venue": "Wellness Center",
+      "specializedServicesProvided": ["Glucose Testing", "Nutritional Guidance", "Diabetes Education"],
+      "healthcareProfessionalsInAttendance": [
+        {"doctorName": "Dr. Davis", "specialty": "Endocrinologist"},
+        {"doctorName": "Dr. White", "specialty": "Dietitian"}
+      ],
+      "targetAudience": "Individuals with diabetes and their families",
+      "description": "Empower yourself with knowledge and tools to manage diabetes effectively. Join our workshop for practical advice and support."
+    },
+    {
+      "campName": "Women's Health Checkup Camp",
+      "image": "womens_health_checkup_image.jpg",
+      "campFees": 15,
+      "scheduledDateTime": "2023-05-08, 10:30:00",
+      "venue": "Women's Health Center",
+      "specializedServicesProvided": ["Pap Smears", "Breast Exams", "Gynecological Consultations"],
+      "healthcareProfessionalsInAttendance": [
+        {"doctorName": "Dr. Anderson", "specialty": "Gynecologist"},
+        {"doctorName": "Dr. Thompson", "specialty": "Women's Health Specialist"},
+        {"doctorName": "Dr. Harris", "specialty": "Mammography Technician"}
+      ],
+      "targetAudience": "Women of all ages",
+      "description": "Prioritize your well-being with comprehensive women's health checkups. Our experts are here to address your concerns and provide personalized care."
+    },
+    {
+      "campName": "Mental Health Awareness Session",
+      "image": "mental_health_awareness_image.jpg",
+      "campFees": 13,
+      "scheduledDateTime": "2023-06-15, 15:30:00",
+      "venue": "Community Counseling Center",
+      "specializedServicesProvided": ["Mental Health Talks", "Counseling Sessions", "Stress Assessments"],
+      "healthcareProfessionalsInAttendance": [
+        {"doctorName": "Dr. Carter", "specialty": "Psychiatrist"},
+        {"doctorName": "Dr. Brown", "specialty": "Licensed Counselor"},
+        {"doctorName": "Dr. Robinson", "specialty": "Clinical Psychologist"}
+      ],
+      "targetAudience": " all individuals interested in mental health",
+      "description": "Break the stigma and join us for an enlightening session on mental health. Discover resources and support available for your mental well-being."
+    },
+    {
+      "campName": "Senior Wellness and Fitness Camp",
+      "image": "senior_wellness_image.jpg",
+      "campFees": 8,
+      "scheduledDateTime": "2023-07-25, 11:00:00",
+      "venue": "Senior Community Center",
+      "specializedServicesProvided": ["Physical Fitness Assessments", "Bone Density Testing", "Geriatric Consultations"],
+      "healthcareProfessionalsInAttendance": [
+        {"doctorName": "Dr. Wilson", "specialty": "Geriatrician"},
+        {"doctorName": "Dr. Moore", "specialty": "Physical Therapist"},
+        {"doctorName": "Dr. Green", "specialty": "Fitness Instructor"}
+      ],
+      "targetAudience": "Seniors aged 60 and above",
+      "description": "Stay active and age gracefully! Join our camp for personalized wellness assessments, fitness tips, and expert advice for senior health."
+    }
+  ]
+  

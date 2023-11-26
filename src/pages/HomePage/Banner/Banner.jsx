@@ -5,7 +5,7 @@ import { Carousel } from 'react-responsive-carousel';
 const Banner = () => {
     return (
         <div className="">
-            <Carousel className="text-center">
+            <Carousel showThumbs={false} className="text-center">
                 {/* first */}
                 <div className=" h-[85vh]" style={{ backgroundImage: 'url(https://media.istockphoto.com/id/1432210844/photo/doctor-applying-vaccine-on-a-child-in-a-sheltering.jpg?s=2048x2048&w=is&k=20&c=QLnXf2Ui3vekoy4kqz1FdJ0fLfxdgrioKgcDBTWb3KE=)', backgroundRepeat: 'no-repeat', backgroundSize: '100vw 85vh' }}>
                     <div className='bg-[#31303099] text-white h-full p-5 md:p-0 rounded-md flex flex-col justify-center items-center'>
