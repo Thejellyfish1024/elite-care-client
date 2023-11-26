@@ -13,7 +13,7 @@ const MainDashboard = () => {
     const isProfessional = true;
 
     return (
-        <div className="pt-[88px]  flex">
+        <div className=" flex">
             <div className="lg:block w-64  hidden  bg-[#dee2e6] pt-5 min-h-screen">
                 <ul className=" min-h-screen w-64 fixed font-bold">
                     {

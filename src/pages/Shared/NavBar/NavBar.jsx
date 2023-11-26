@@ -30,7 +30,7 @@ const NavBar = () => {
         </ul>
     </>
     return (
-        <div className="bg-[#023047] w-full p-5 fixed">
+        <div className="bg-[#023047] w-full p-5 fixed z-50">
             <div className='max-w-7xl mx-auto flex justify-between text-white items-center font-semibold'>
 
                 <div className='flex gap-2 items-center'>
