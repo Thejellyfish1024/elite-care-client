@@ -166,7 +166,6 @@ const CampDetails = () => {
                                     <input type="text" {...register("emergency")} name="emergency" placeholder='Emergency Contact' className='py-3 pl-4 w-full border border-gray-300 mt-3 rounded-md' id="" />
                                     <p className="font-semibold">(Optional)</p>
                                 </div>
-                                {errors.address && <span className='text-red-500'>Address is required</span>}
                             </div>
 
                             <div className='text-end mt-10'>

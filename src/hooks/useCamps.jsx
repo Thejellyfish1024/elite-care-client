@@ -14,7 +14,7 @@ const useCamps = () => {
            return await data.data;
         }
     })
-    console.log('use camps data',data);
+    // console.log('use camps data',data);
 
     return {data, refetch};
 };

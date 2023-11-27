@@ -9,8 +9,8 @@ const MainDashboard = () => {
 
     const {user} = useAuth();
 
-    const isOrganizer = false;
-    const isProfessional = true;
+    const isOrganizer = true;
+    const isProfessional = false;
 
     return (
         <div className=" flex">

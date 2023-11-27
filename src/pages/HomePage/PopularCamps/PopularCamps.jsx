@@ -6,6 +6,7 @@ import SingleCamp from "./singleCamp";
 const PopularCamps = () => {
 
     const {data : camps} = useCamps();
+    console.log(camps);
 
     return (
         <div className="max-w-7xl mx-auto my-16">

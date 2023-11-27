@@ -19,11 +19,13 @@ import ManageCamps from "../pages/Dashboard/Organizers/ManageCamps/ManageCamps";
 import ManageRegisteredCamps from "../pages/Dashboard/Organizers/ManageRegisteredCamps/ManageRegisteredCamps";
 import AcceptedCamps from "../pages/Dashboard/Professionals/AcceptedCamps/AcceptedCamps";
 import CampDetails from "../pages/CampDetails/CampDetails";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement:<ErrorPage></ErrorPage>,
     children: [
       {
         path: '/',

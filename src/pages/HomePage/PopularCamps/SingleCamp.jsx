@@ -1,18 +1,39 @@
 /* eslint-disable react/prop-types */
 
 import { Link } from "react-router-dom";
+import useAxiosPublic from "../../../hooks/useAxiosPublic";
+import { useQuery } from "@tanstack/react-query";
 
 
 const SingleCamp = ({ camp }) => {
+    const axiosPublic = useAxiosPublic();
+
     const { campName, scheduledDateTime, specializedServicesProvided, healthcareProfessionalsInAttendance, targetAudience, campFees, venue } = camp
+
+    const { data } = useQuery({
+        queryKey: ['registrationCount', camp?._id],
+        queryFn: async () => {
+            const res = await axiosPublic.get(`/registration-stat/${camp?._id}`)
+            return res.data;
+        }
+    })
+    console.log('registration Count', data);
+
     return (
         <div className="flex justify-center p-2 md:p-0">
             <div className="lg:w-4/5 text-white bg-gradient-to-r md:w-3/5">
+                <div>
                 <h2 className=" bg-gradient-to-r from-[#f48c06] to-[#faa307] p-3 md:text-xl text-lg uppercase rounded-t-full font-bold text-center">
                     {campName}
                 </h2>
+                <p className="bg-red-800 text-center py-1">Participants : {data?.totalRegistration}</p>
+                </div>
+
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgN8UVn7hUYf3GotsyGV_GDBqNe8viyQHU969R7XyprSdvlgpGOIHaPWwo4WWGAHLeoeI&usqp=CAU" className="w-full h-52" alt="" />
-                <div className="flex justify-center px-6 -mt-5 z-30">
+
+                
+
+                <div className="flex justify-center px-6 -mt-5 ">
                     <p className="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% text-center py-2 w-full rounded-full font-bold">On {scheduledDateTime} Sharp
                         <span className="block">Location : {venue}</span>
                     </p>
@@ -46,7 +67,7 @@ const SingleCamp = ({ camp }) => {
                     <p className="md:pl-5 pl-2 font-bold">Camp Fee : ${campFees}</p>
                 </div>
                 <Link to={`/camp-details/${camp?._id}`}>
-                    <button type="button" className="bg-gradient-to-r hover:from-green-400 hover:to-blue-500 from-pink-500 to-yellow-500
+                    <button type="button" className="bg-gradient-to-r hover:from-green-400 hover:to-blue-500 from-pink-500 to-yellow-500 hover:scale-110
                 w-full text-center font-bold py-4 rounded-b-full">
                         See Camp Details
                     </button>
