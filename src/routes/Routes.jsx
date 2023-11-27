@@ -20,6 +20,7 @@ import ManageRegisteredCamps from "../pages/Dashboard/Organizers/ManageRegistere
 import AcceptedCamps from "../pages/Dashboard/Professionals/AcceptedCamps/AcceptedCamps";
 import CampDetails from "../pages/CampDetails/CampDetails";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import PrivateRoute from "./PrivateRoute";
 
 export const router = createBrowserRouter([
   {
@@ -50,11 +51,11 @@ export const router = createBrowserRouter([
       },
       {
         path: '/available-camps',
-        element: <AvailableCamps></AvailableCamps>
+        element: <PrivateRoute><AvailableCamps></AvailableCamps></PrivateRoute>
       },
       {
         path: '/dashboard',
-        element: <MainDashboard></MainDashboard>,
+        element: <PrivateRoute><MainDashboard></MainDashboard></PrivateRoute>,
         children: [
           // 
           // participants

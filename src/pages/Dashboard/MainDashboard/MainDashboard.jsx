@@ -30,7 +30,7 @@ const MainDashboard = () => {
                     }
                 </ul>
             </div>
-            <div>
+            <div className="flex-grow">
                 <Outlet></Outlet>
             </div>
         </div>

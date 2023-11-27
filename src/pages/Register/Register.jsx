@@ -26,7 +26,7 @@ const Register = () => {
         createUser(data.email, data.password)
             .then(result => {
                 console.log(result.user);
-                updateUserProfile(data.name, data.email)
+                updateUserProfile(data.name, null)
                 axiosSecure.post('/users', { name: data?.name, email: data?.email })
                     .then(res => {
                         console.log(res.data);
