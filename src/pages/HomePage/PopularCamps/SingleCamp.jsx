@@ -18,7 +18,7 @@ const SingleCamp = ({ camp }) => {
                     </p>
                 </div>
                 <div className="bg-gradient-to-r from-[#f48c06] to-[#faa307] flex justify-between md:justify-around -mt-5
-                 pt-8 p-3 md:h-60 h-72">
+                 pt-8 p-3 md:h-52 h-60">
                     <div className="space-y-2 ">
                         <h4 className="text-lg font-bold">Professionals</h4>
                         {
@@ -28,11 +28,11 @@ const SingleCamp = ({ camp }) => {
                             </div>)
                         }
                     </div>
-                    <div className="space-y-2 ">
+                    <div className="space-y-1 ml-6 md:ml-0">
                         <h4 className="font-bold">Services</h4>
                         {
                             specializedServicesProvided?.map(service => <div className="md:pl-4" key={service}>
-                                <li className="md:font-bold font-medium ">{service}</li>
+                                <li className="md:font-bold font-medium">{service}</li>
                             </div>)
                         }
                     </div>
@@ -45,7 +45,7 @@ const SingleCamp = ({ camp }) => {
                 <div className="bg-gray-600 py-3 -mt-12">
                     <p className="md:pl-5 pl-2 font-bold">Camp Fee : ${campFees}</p>
                 </div>
-                <Link to={`/camp-details`}>
+                <Link to={`/camp-details/${camp?._id}`}>
                     <button type="button" className="bg-gradient-to-r hover:from-green-400 hover:to-blue-500 from-pink-500 to-yellow-500
                 w-full text-center font-bold py-4 rounded-b-full">
                         See Camp Details

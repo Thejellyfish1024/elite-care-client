@@ -8,7 +8,6 @@
       "specializedServicesProvided": ["Cardiac Consultation", "Blood Pressure Check", "Cholesterol Screening"],
       "healthcareProfessionalsInAttendance": [
         {"doctorName": "Dr. Smith", "specialty": "Cardiologist"},
-        {"doctorName": "Dr. Johnson", "specialty": "Cardiac Nurse"},
         {"doctorName": "Dr. Davis", "specialty": "Nutritionist"}
       ],
       "targetAudience": "Adults aged 40 and above",
@@ -51,8 +50,7 @@
       "specializedServicesProvided": ["Pap Smears", "Breast Exams", "Gynecological Consultations"],
       "healthcareProfessionalsInAttendance": [
         {"doctorName": "Dr. Anderson", "specialty": "Gynecologist"},
-        {"doctorName": "Dr. Thompson", "specialty": "Women's Health Specialist"},
-        {"doctorName": "Dr. Harris", "specialty": "Mammography Technician"}
+        {"doctorName": "Dr. Thompson", "specialty": "Women's Health Specialist"}
       ],
       "targetAudience": "Women of all ages",
       "description": "Prioritize your well-being with comprehensive women's health checkups. Our experts are here to address your concerns and provide personalized care."
@@ -66,8 +64,7 @@
       "specializedServicesProvided": ["Mental Health Talks", "Counseling Sessions", "Stress Assessments"],
       "healthcareProfessionalsInAttendance": [
         {"doctorName": "Dr. Carter", "specialty": "Psychiatrist"},
-        {"doctorName": "Dr. Brown", "specialty": "Licensed Counselor"},
-        {"doctorName": "Dr. Robinson", "specialty": "Clinical Psychologist"}
+        {"doctorName": "Dr. Brown", "specialty": "Licensed Counselor"}
       ],
       "targetAudience": " all individuals interested in mental health",
       "description": "Break the stigma and join us for an enlightening session on mental health. Discover resources and support available for your mental well-being."
@@ -81,8 +78,7 @@
       "specializedServicesProvided": ["Physical Fitness Assessments", "Bone Density Testing", "Geriatric Consultations"],
       "healthcareProfessionalsInAttendance": [
         {"doctorName": "Dr. Wilson", "specialty": "Geriatrician"},
-        {"doctorName": "Dr. Moore", "specialty": "Physical Therapist"},
-        {"doctorName": "Dr. Green", "specialty": "Fitness Instructor"}
+        {"doctorName": "Dr. Moore", "specialty": "Physical Therapist"}
       ],
       "targetAudience": "Seniors aged 60 and above",
       "description": "Stay active and age gracefully! Join our camp for personalized wellness assessments, fitness tips, and expert advice for senior health."

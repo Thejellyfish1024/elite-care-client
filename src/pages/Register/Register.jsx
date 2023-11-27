@@ -7,34 +7,40 @@ import useAuth from "../../hooks/useAuth";
 import toast from "react-hot-toast";
 import GoogleSigning from "../Shared/socialSignings/GoogleSigning";
 import { Helmet } from "react-helmet-async";
+import useAxiosSecure from "../../hooks/useAxiosSecure";
 const Register = () => {
 
+    const axiosSecure = useAxiosSecure();
     const navigate = useNavigate()
 
-    const {createUser, updateUserProfile, logOut} = useAuth()
+    const { createUser, updateUserProfile, logOut } = useAuth()
 
     const { register, handleSubmit, formState: { errors } } = useForm()
 
     const onSubmit = (data) => {
         console.log(data)
 
-        if(!/^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\/\|]).{6,}$/.test(data?.password)){
+        if (!/^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\/\|]).{6,}$/.test(data?.password)) {
             return toast.error('Password have to be minimum 6 characters . It should include capital letter and special character')
         }
         createUser(data.email, data.password)
-        .then(result => {
-            console.log(result.user);
-            updateUserProfile(data.name, data.email)
-            logOut()
-            toast.success('User Created Successfully')
+            .then(result => {
+                console.log(result.user);
+                updateUserProfile(data.name, data.email)
+                axiosSecure.post('/users', { name: data?.name, email: data?.email })
+                    .then(res => {
+                        console.log(res.data);
+                        logOut()
+                        toast.success('User Created Successfully')
 
-            navigate('/login')
+                        navigate('/login')
+                    })
 
-        })
-        .catch(error => {
-            console.log(error);
-            toast.error(`${error.message}`)
-        })
+            })
+            .catch(error => {
+                console.log(error);
+                toast.error(`${error.message}`)
+            })
     }
 
     return (

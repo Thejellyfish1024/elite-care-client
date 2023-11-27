@@ -1,5 +1,5 @@
 import { FcGoogle } from "react-icons/fc";
-// import useAxiosSecure from "../../../hooks/useAxiosSecure";
+import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import { useNavigate } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 import toast from "react-hot-toast";
@@ -7,18 +7,18 @@ import toast from "react-hot-toast";
 const GoogleSigning = () => {
 
     const { googleSigning } = useAuth();
-    // const axiosSecure = useAxiosSecure()
+    const axiosSecure = useAxiosSecure()
     const navigate = useNavigate()
 
     const handleGoogle = () => {
         googleSigning()
             .then(async (result) => {
                 console.log(result.user);
-                // await axiosSecure.post('/users', {name : result?.user?.displayName, email : result?.user?.email})
-                // .then(res =>{
-                //     console.log(res.data);
-                //     navigate('/')
-                // })
+                await axiosSecure.post('/users', {name : result?.user?.displayName, email : result?.user?.email})
+                .then(res =>{
+                    console.log(res.data);
+                    navigate('/')
+                })
                 toast.success('Successfully logged in')
 
                 navigate(location?.state || '/')
