@@ -15,9 +15,11 @@ const OrganizerProfile = () => {
     const { user } = useAuth()
     const axiosPublic = useAxiosPublic();
     const axiosSecure = useAxiosSecure();
-    const { data: profile } = useProfile(user?.email)
-    const {isOrganizer} = useOrganizer()
+    const { data: profile , refetch} = useProfile(user?.email)
+    const { isOrganizer } = useOrganizer()
     console.log('isOrganizer', isOrganizer);
+
+    console.log('profile', profile);
 
     const onSubmit = async (data) => {
         // console.log(data)
@@ -44,16 +46,17 @@ const OrganizerProfile = () => {
                 }
 
                 const updatedProfile = {
-                    name: data?.name,
-                    email: data?.email,
-                    number: data?.number,
+                    name: data?.name || profile?.name,
+                    email: data?.email || profile?.email,
+                    number: data?.number || profile?.number,
                     image: image
                 }
-                // console.log(updatedProfile);
-                // 
+                console.log(updatedProfile);
+                
                 const updateRes = await axiosSecure.put(`/users/${user?.email}`, updatedProfile)
                 console.log(updateRes.data);
                 if (updateRes?.data?.modifiedCount > 0) {
+                    refetch()
                     Swal.fire({
                         title: "Updated!",
                         text: "Your profile has been updated.",
@@ -76,10 +79,19 @@ const OrganizerProfile = () => {
                 <form onSubmit={handleSubmit(onSubmit)} className="md:flex gap-8 lg:w-3/5 w-4/5 mx-auto items-center">
                     <div className="flex flex-col items-center">
                         {
-                            user?.photoURL ?
-                                <img src={user?.photoURL} className="w-60 rounded-full" alt="" />
+                            profile?.image ?
+                                <img className='w-60 h-60 rounded-full' src={profile?.image} alt="not found" />
                                 :
-                                <FaUserCircle className='text-9xl'></FaUserCircle>
+                                <div>
+                                    {
+                                        user?.photoURL ?
+                                            <img className='w-60 h-60 rounded-full' src={user?.photoURL} alt="not found" />
+                                            :
+                                            <FaUserCircle className='text-4xl'></FaUserCircle>
+
+                                    }
+
+                                </div>
                         }
                         <div className="flex justify-center gap-4 mt-4">
                             <FaFacebook size={30}></FaFacebook>
@@ -88,22 +100,22 @@ const OrganizerProfile = () => {
                         </div>
                         <div className="mt-4 space-y-2">
                             <p className="font-bold">Change Profile Picture</p>
-                            <input type="file" {...register("image")} name="image"  id="" />
+                            <input type="file" {...register("image")} name="image" id="" />
                         </div>
                     </div>
                     <div className="flex-grow">
                         <div className='mt-4'>
                             <div className='mt-4'>
                                 <h4 className='text-xl font-semibold'>Your Name</h4>
-                                <input type="text" defaultValue={profile?.name} {...register("name", { required: true })} name="name" className='py-3 pl-4 w-full border border-gray-300 mt-3 rounded-md' id="" />
+                                <input type="text" defaultValue={profile?.name} {...register("name")} name="name" className='py-3 pl-4 w-full border border-gray-300 mt-3 rounded-md' id="" />
                             </div>
                             <div className="mt-4">
                                 <h4 className='text-xl font-semibold'>Your Email</h4>
-                                <input type="email" {...register("email", { required: true })} name="email" defaultValue={profile?.email} className='py-3 pl-4 w-full border border-gray-300 mt-3 rounded-md' id="" />
+                                <input type="email" {...register("email")} name="email" defaultValue={profile?.email} className='py-3 pl-4 w-full border border-gray-300 mt-3 rounded-md' id="" />
                             </div>
                             <div className="mt-4">
                                 <h4 className='text-xl font-semibold'>Phone Number</h4>
-                                <input type="" {...register("number", { required: true })} defaultValue={profile?.number} name="number" placeholder={!profile?.number && 'Enter your number'} className='py-3 pl-4 w-full border border-gray-300 mt-3 rounded-md' id="" />
+                                <input type="" {...register("number")} defaultValue={profile?.number} name="number" placeholder={!profile?.number && 'Enter your number'} className='py-3 pl-4 w-full border border-gray-300 mt-3 rounded-md' id="" />
                             </div>
                         </div>
 

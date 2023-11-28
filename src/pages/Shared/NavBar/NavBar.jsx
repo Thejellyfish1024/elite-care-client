@@ -6,11 +6,13 @@ import { FaUserCircle } from "react-icons/fa";
 import { useState } from 'react';
 import toast from 'react-hot-toast';
 import DashboardDrawer from '../../Dashboard/MainDashboard/DashboardDrawer';
+import useProfile from '../../../hooks/useProfile';
 
 const NavBar = () => {
 
     const { user, logOut } = useAuth();
     const [showProfile, setShowProfile] = useState(false);
+    const { data: profile } = useProfile(user?.email);
 
 
     const navLinks = <>
@@ -50,9 +52,19 @@ const NavBar = () => {
 
                                 <button onClick={() => setShowProfile(!showProfile)}>
                                     {
-                                        user?.photoURL ?
-                                            <img className='w-12 h-12 rounded-full' src={user.photoURL} alt="not found" /> :
-                                            <FaUserCircle className='text-4xl'></FaUserCircle>
+                                        profile?.image ?
+                                            <img className='w-12 h-12 rounded-full' src={profile?.image} alt="not found" />
+                                            :
+                                            <div>
+                                                {
+                                                    user?.photoURL ?
+                                                        <img className='w-12 h-12 rounded-full' src={user?.photoURL} alt="not found" />
+                                                        :
+                                                        <FaUserCircle className='text-4xl'></FaUserCircle>
+
+                                                }
+
+                                            </div>
                                     }
                                 </button>
                                 {/* top-9 right-0 */}

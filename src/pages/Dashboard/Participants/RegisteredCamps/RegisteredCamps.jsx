@@ -1,6 +1,7 @@
 
 
 const RegisteredCamps = () => {
+    
     return (
         <div>
             Registered Camps

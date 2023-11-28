@@ -47,6 +47,7 @@ const CampDetails = () => {
         console.log('modal' , details)
         const newRegister = {
             campId : data?._id,
+            organizerEmail : data?.organizerEmail,
             email : user?.email,
             name : details?.name,
             age : details?.age,
@@ -54,7 +55,9 @@ const CampDetails = () => {
             fee : details?.fee,
             gender : details?.gender,
             phone : details?.phone,
-            emergency : details?.emergency
+            emergency : details?.emergency,
+            payment : 'unpaid',
+            status : 'pending'
         }
         console.log('new form', newRegister);
 
