@@ -21,6 +21,7 @@ import AcceptedCamps from "../pages/Dashboard/Professionals/AcceptedCamps/Accept
 import CampDetails from "../pages/CampDetails/CampDetails";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import PrivateRoute from "./PrivateRoute";
+import OrganizerRoute from "./OrganizerRoute";
 
 export const router = createBrowserRouter([
   {
@@ -94,27 +95,27 @@ export const router = createBrowserRouter([
           // 
           {
             path: '/dashboard/organizer-profile',
-            element: <OrganizerProfile></OrganizerProfile>
+            element: <OrganizerRoute><OrganizerProfile></OrganizerProfile></OrganizerRoute>
           },
           {
             path: '/dashboard/add-a-camp',
-            element: <AddCamp></AddCamp>
+            element: <OrganizerRoute><AddCamp></AddCamp></OrganizerRoute>
           },
           {
             path: '/dashboard/manage-camps',
-            element: <ManageCamps></ManageCamps>
+            element: <OrganizerRoute><ManageCamps></ManageCamps></OrganizerRoute>
           },
           {
             path: '/dashboard/manage-registered-camps',
-            element: <ManageRegisteredCamps></ManageRegisteredCamps>
+            element: <OrganizerRoute><ManageRegisteredCamps></ManageRegisteredCamps></OrganizerRoute>
           },
           {
             path: '/dashboard/add-upcoming-camp',
-            element: <AddUpcomingCamp></AddUpcomingCamp>
+            element: <OrganizerRoute><AddUpcomingCamp></AddUpcomingCamp></OrganizerRoute>
           },
           {
             path: '/dashboard/manage-upcoming-camps',
-            element: <ManageUpcomingCamps></ManageUpcomingCamps>
+            element: <OrganizerRoute><ManageUpcomingCamps></ManageUpcomingCamps></OrganizerRoute>
           },
 
         ]
