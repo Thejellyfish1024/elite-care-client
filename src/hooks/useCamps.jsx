@@ -8,7 +8,7 @@ const useCamps = () => {
     const axiosPublic = useAxiosPublic()
 
     const {data, refetch} = useQuery({
-        queryKey: ['medicalCamps'],
+        queryKey: ['popularCamps'],
         queryFn: async () =>{
            const data = await axiosPublic.get('/popularCamps')
            return await data.data;

@@ -1,8 +1,9 @@
 [
     {
       "campName": "Heart Health Awareness Camp",
-      "image": "heart_health_image.jpg",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmOLNgpWR-DpWuQmAaIGpmFQSOEST9ArCpIJ-HwvqJNli8N3gQhh_pFrjsU8pl-Uc6L1s&usqp=CAU",
       "campFees": 10,
+      "organizerEmail": "admin@gmail.com",
       "scheduledDateTime": "2023-02-15, 09:00:00",
       "venue": "City Community Center",
       "specializedServicesProvided": ["Cardiac Consultation", "Blood Pressure Check", "Cholesterol Screening"],
@@ -15,8 +16,9 @@
     },
     {
       "campName": "Pediatric Immunization Drive",
-      "image": "pediatric_immunization_image.jpg",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7Fu8KgRuE90HsKvitZ74Uc66UYiadF2AUBfAGq-l95qv3WFmag1T4bD1y-uZtCi-PL7A&usqp=CAU",
       "campFees": 20,
+      "organizerEmail": "admin@gmail.com",
       "scheduledDateTime": "2023-03-10, 11:30:00",
       "venue": "Community Health Clinic",
       "specializedServicesProvided": ["Childhood Vaccinations", "Pediatric Consultations"],
@@ -29,8 +31,9 @@
     },
     {
       "campName": "Diabetes Management Workshop",
-      "image": "diabetes_management_image.jpg",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDeCxd2fU1uy3Ja-gqRlgMSovVg9A1JfXp6g&usqp=CAU",
       "campFees": 5,
+      "organizerEmail": "admin@gmail.com",
       "scheduledDateTime": "2023-04-20, 14:00:00",
       "venue": "Wellness Center",
       "specializedServicesProvided": ["Glucose Testing", "Nutritional Guidance", "Diabetes Education"],
@@ -43,8 +46,9 @@
     },
     {
       "campName": "Women's Health Checkup Camp",
-      "image": "womens_health_checkup_image.jpg",
+      "image": "https://assets.thehansindia.com/h-upload/2020/06/17/977627-women-health-check-up-and-c.webp",
       "campFees": 15,
+      "organizerEmail": "admin@gmail.com",
       "scheduledDateTime": "2023-05-08, 10:30:00",
       "venue": "Women's Health Center",
       "specializedServicesProvided": ["Pap Smears", "Breast Exams", "Gynecological Consultations"],
@@ -57,8 +61,9 @@
     },
     {
       "campName": "Mental Health Awareness Session",
-      "image": "mental_health_awareness_image.jpg",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb_sgtsnDA0333kAG2LuvVXNMvS7wiUU2UZovg4DFqbOwUJXFmOzFMCpuQBBgNfC4vF9k&usqp=CAU",
       "campFees": 13,
+      "organizerEmail": "alamin102410@gmail.com",
       "scheduledDateTime": "2023-06-15, 15:30:00",
       "venue": "Community Counseling Center",
       "specializedServicesProvided": ["Mental Health Talks", "Counseling Sessions", "Stress Assessments"],
@@ -71,8 +76,9 @@
     },
     {
       "campName": "Senior Wellness and Fitness Camp",
-      "image": "senior_wellness_image.jpg",
+      "image": "https://stanthonyskc.com/wp-content/uploads/2022/08/Staying-Active-in-an-Assisted-Living-Community.jpeg",
       "campFees": 8,
+      "organizerEmail": "alamin102410@gmail.com",
       "scheduledDateTime": "2023-07-25, 11:00:00",
       "venue": "Senior Community Center",
       "specializedServicesProvided": ["Physical Fitness Assessments", "Bone Density Testing", "Geriatric Consultations"],

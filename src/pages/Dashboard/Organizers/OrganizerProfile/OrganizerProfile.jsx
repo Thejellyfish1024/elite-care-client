@@ -70,7 +70,7 @@ const OrganizerProfile = () => {
         <div className="">
             <div className="mt-6">
                 <h2 className="text-4xl font-bold text-center mb-10">My Profile</h2>
-                <form onSubmit={handleSubmit(onSubmit)} className="flex gap-8 w-3/5 mx-auto items-center">
+                <form onSubmit={handleSubmit(onSubmit)} className="md:flex gap-8 lg:w-3/5 w-4/5 mx-auto items-center">
                     <div className="flex flex-col items-center">
                         {
                             user?.photoURL ?
@@ -85,7 +85,7 @@ const OrganizerProfile = () => {
                         </div>
                         <div className="mt-4 space-y-2">
                             <p className="font-bold">Change Profile Picture</p>
-                            <input type="file" {...register("image")} name="image" id="" />
+                            <input type="file" {...register("image")} name="image"  id="" />
                         </div>
                     </div>
                     <div className="flex-grow">

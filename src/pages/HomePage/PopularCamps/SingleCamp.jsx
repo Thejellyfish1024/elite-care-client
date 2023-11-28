@@ -1,22 +1,22 @@
 /* eslint-disable react/prop-types */
 
 import { Link } from "react-router-dom";
-import useAxiosPublic from "../../../hooks/useAxiosPublic";
-import { useQuery } from "@tanstack/react-query";
+import useRegistrationCount from "../../../hooks/useRegistrationCount";
 
 
 const SingleCamp = ({ camp }) => {
-    const axiosPublic = useAxiosPublic();
 
     const { campName, scheduledDateTime, specializedServicesProvided, healthcareProfessionalsInAttendance, targetAudience, campFees, venue } = camp
 
-    const { data } = useQuery({
-        queryKey: ['registrationCount', camp?._id],
-        queryFn: async () => {
-            const res = await axiosPublic.get(`/registration-stat/${camp?._id}`)
-            return res.data;
-        }
-    })
+    const {data} = useRegistrationCount(camp._id)
+
+    // const { data } = useQuery({
+    //     queryKey: ['registrationCount', camp?._id],
+    //     queryFn: async () => {
+    //         const res = await axiosPublic.get(`/registration-stat/${camp?._id}`)
+    //         return res.data;
+    //     }
+    // })
     console.log('registration Count', data);
 
     return (
@@ -29,7 +29,7 @@ const SingleCamp = ({ camp }) => {
                 <p className="bg-red-800 text-center py-1">Participants : {data?.totalRegistration}</p>
                 </div>
 
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgN8UVn7hUYf3GotsyGV_GDBqNe8viyQHU969R7XyprSdvlgpGOIHaPWwo4WWGAHLeoeI&usqp=CAU" className="w-full h-52" alt="" />
+                <img src={camp?.image} className="w-full h-52" alt="" />
 
                 
 
