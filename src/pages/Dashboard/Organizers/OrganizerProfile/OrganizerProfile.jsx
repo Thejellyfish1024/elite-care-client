@@ -5,6 +5,7 @@ import useAxiosPublic from "../../../../hooks/useAxiosPublic";
 import useProfile from "../../../../hooks/useProfile";
 import useAxiosSecure from "../../../../hooks/useAxiosSecure";
 import Swal from "sweetalert2";
+import useOrganizer from "../../../../hooks/useOrganizer";
 
 const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY
 const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`
@@ -15,6 +16,8 @@ const OrganizerProfile = () => {
     const axiosPublic = useAxiosPublic();
     const axiosSecure = useAxiosSecure();
     const { data: profile } = useProfile(user?.email)
+    const {isOrganizer} = useOrganizer()
+    console.log('isOrganizer', isOrganizer);
 
     const onSubmit = async (data) => {
         // console.log(data)
