@@ -10,15 +10,6 @@ const SingleCamp = ({ camp }) => {
 
     const {data} = useRegistrationCount(camp._id)
 
-    // const { data } = useQuery({
-    //     queryKey: ['registrationCount', camp?._id],
-    //     queryFn: async () => {
-    //         const res = await axiosPublic.get(`/registration-stat/${camp?._id}`)
-    //         return res.data;
-    //     }
-    // })
-    console.log('registration Count', data);
-
     return (
         <div className="flex justify-center p-2 md:p-0">
             <div className="lg:w-4/5 text-white bg-gradient-to-r md:w-3/5">

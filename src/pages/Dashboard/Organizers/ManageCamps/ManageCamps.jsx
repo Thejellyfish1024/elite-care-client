@@ -28,7 +28,7 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
 const ManageCamps = () => {
     const axiosSecure = useAxiosSecure()
     const { user } = useAuth()
-    const { data: camps } = useQuery({
+    const { data: camps , refetch} = useQuery({
         queryKey: ['organizedCamps', user?.email],
         queryFn: async () => {
             const res = await axiosSecure.get(`/medical-camps/${user?.email}`)
@@ -52,7 +52,7 @@ const ManageCamps = () => {
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {camps?.map((camp) => <ManageTableRow key={camp._id} camp={camp}></ManageTableRow>)}
+                        {camps?.map((camp) => <ManageTableRow key={camp._id} refetch={refetch} camp={camp}></ManageTableRow>)}
                     </TableBody>
                 </Table>
             </TableContainer>
