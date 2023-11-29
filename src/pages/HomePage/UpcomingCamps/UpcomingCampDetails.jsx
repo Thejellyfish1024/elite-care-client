@@ -1,12 +1,12 @@
 import { Box, Modal } from "@mui/material";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import useAuth from "../../hooks/useAuth";
 import { useQuery } from "@tanstack/react-query";
 import { useParams } from "react-router-dom";
-import useAxiosPublic from "../../hooks/useAxiosPublic";
-import useAxiosSecure from "../../hooks/useAxiosSecure";
 import Swal from "sweetalert2";
+import useAuth from "../../../hooks/useAuth";
+import useAxiosPublic from "../../../hooks/useAxiosPublic";
+import useAxiosSecure from "../../../hooks/useAxiosSecure";
 
 const style = {
     position: 'absolute',
@@ -20,7 +20,7 @@ const style = {
 };
 
 
-const CampDetails = () => {
+const UpcomingCampDetails = () => {
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
@@ -34,7 +34,7 @@ const CampDetails = () => {
     const {data} = useQuery({
         queryKey:[id],
         queryFn: async() =>{
-            const res = await axiosPublic.get(`/camp-details/${id}`)
+            const res = await axiosPublic.get(`/upcoming-camp-details/${id}`)
             return res.data;
         }
     })
@@ -77,7 +77,7 @@ const CampDetails = () => {
     }
 
     return (
-        <div className="my-16 min-h-[90vh]">
+        <div className="my-16 min-h-[90vh] ">
             <div className="relative flex flex-col lg:flex-row min-h-[70vh] mt-10 w-full max-w-7xl mx-auto rounded-xl bg-white bg-clip-border text-gray-700 ">
                 <div className="relative p-2 md:p-4 lg:p-0 w-full lg:w-3/5 m-0 overflow-hidden text-gray-700 bg-white rounded-r-none 
                 shrink-0 rounded-xl bg-clip-border">
@@ -87,7 +87,7 @@ const CampDetails = () => {
                         className="object-cover w-full h-full max-h-[70vh]"
                     />
                 </div>
-                <div className="flex flex-col">
+                <div className="flex flex-col w-full">
                     <div className="p-6 flex-grow">
 
                         <h6 className="block mb-4 font-sans  antialiased text-2xl font-semibold leading-relaxed tracking-normal text-pink-500 uppercase">
@@ -185,4 +185,4 @@ const CampDetails = () => {
     );
 };
 
-export default CampDetails;
+export default UpcomingCampDetails;

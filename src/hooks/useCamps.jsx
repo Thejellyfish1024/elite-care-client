@@ -3,14 +3,14 @@ import { useQuery } from "@tanstack/react-query";
 import useAxiosPublic from "./useAxiosPublic";
 
 
-const useCamps = () => {
+const useCamps = (camps) => {
 
     const axiosPublic = useAxiosPublic()
 
     const {data, refetch} = useQuery({
-        queryKey: ['popularCamps'],
+        queryKey: [camps],
         queryFn: async () =>{
-           const data = await axiosPublic.get('/popularCamps')
+           const data = await axiosPublic.get(`${camps}`)
            return await data.data;
         }
     })

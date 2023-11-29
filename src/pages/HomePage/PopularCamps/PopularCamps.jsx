@@ -5,7 +5,7 @@ import SingleCamp from "./singleCamp";
 
 const PopularCamps = () => {
 
-    const {data : camps} = useCamps();
+    const {data : camps} = useCamps('/popularCamps');
     console.log(camps);
 
     return (

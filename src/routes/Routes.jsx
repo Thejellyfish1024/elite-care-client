@@ -22,6 +22,7 @@ import CampDetails from "../pages/CampDetails/CampDetails";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import PrivateRoute from "./PrivateRoute";
 import OrganizerRoute from "./OrganizerRoute";
+import UpcomingCampDetails from "../pages/HomePage/UpcomingCamps/UpcomingCampDetails";
 
 export const router = createBrowserRouter([
   {
@@ -36,8 +37,11 @@ export const router = createBrowserRouter([
       {
         path:'/camp-details/:campId',
         element:<CampDetails></CampDetails>,
-      }
-      ,
+      },
+      {
+        path:'/upcoming-camp-details/:campId',
+        element:<UpcomingCampDetails></UpcomingCampDetails>,
+      },
       {
         path: '/login',
         element: <Login></Login>
