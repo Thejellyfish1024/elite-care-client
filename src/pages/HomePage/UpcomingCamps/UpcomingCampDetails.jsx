@@ -7,6 +7,7 @@ import Swal from "sweetalert2";
 import useAuth from "../../../hooks/useAuth";
 import useAxiosPublic from "../../../hooks/useAxiosPublic";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
+import InterestedComingModal from "./InterestedComingModal";
 
 const style = {
     position: 'absolute',
@@ -24,55 +25,59 @@ const UpcomingCampDetails = () => {
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
+    const [professionalOpen, setProfessionalOpen] = useState(false);
+    const handleProfessionalOpen = () => setProfessionalOpen(true);
+    const handleProfessionalClose = () => setProfessionalOpen(false);
 
-    const {user} = useAuth();
+    const { user } = useAuth();
     const axiosPublic = useAxiosPublic();
     const axiosSecure = useAxiosSecure();
     const id = useParams()?.campId
-    
+    const isProfessional = true;
 
-    const {data} = useQuery({
-        queryKey:[id],
-        queryFn: async() =>{
+
+    const { data } = useQuery({
+        queryKey: [id],
+        queryFn: async () => {
             const res = await axiosPublic.get(`/upcoming-camp-details/${id}`)
             return res.data;
         }
     })
 
-    // console.log('data', data);
+
 
     const { register, handleSubmit, formState: { errors } } = useForm()
 
     const onSubmit = (details) => {
-        console.log('modal' , details)
+        console.log('modal', details)
         const newRegister = {
-            campId : data?._id,
-            organizerEmail : data?.organizerEmail,
-            email : user?.email,
-            name : details?.name,
-            age : details?.age,
-            address : details?.address,
-            fee : details?.fee,
-            gender : details?.gender,
-            phone : details?.phone,
-            emergency : details?.emergency,
-            payment : 'unpaid',
-            status : 'pending'
+            campId: data?._id,
+            organizerEmail: data?.organizerEmail,
+            email: user?.email,
+            name: details?.name,
+            age: details?.age,
+            address: details?.address,
+            fee: details?.fee,
+            gender: details?.gender,
+            phone: details?.phone,
+            emergency: details?.emergency,
+            payment: 'unpaid',
+            status: 'pending'
         }
         console.log('new form', newRegister);
 
         axiosSecure.post('/registered-participants', newRegister)
-        .then(res =>{
-            console.log(res.data);
-            Swal.fire({
-                position: "top-end",
-                icon: "success",
-                title: "Registration Successful",
-                showConfirmButton: false,
-                timer: 1500
-            });
-            setOpen(false)
-        })
+            .then(res => {
+                console.log(res.data);
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Registration Successful",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                setOpen(false)
+            })
 
     }
 
@@ -108,11 +113,20 @@ const UpcomingCampDetails = () => {
                         </div>
                     </div>
                     <div className="flex px-6 justify-center">
-                        <button disabled={user ? false : true} onClick={handleOpen} className={` py-3 w-full rounded-lg text-white uppercase text-lg font-semibold ${user ? 'bg-pink-600 hover:bg-gray-800' : 'bg-slate-300'}
-                        `}>Join Camp</button>
+                        {
+                            isProfessional ?
+                                <button onClick={handleProfessionalOpen}
+                                    className={` py-3 w-full rounded-lg text-white uppercase text-lg font-semibold
+                         ${user ? 'bg-pink-600 hover:bg-gray-800' : 'bg-slate-300'}`}>Interested Upcoming</button>
+                                :
+                                <button disabled={user ? false : true} onClick={handleOpen}
+                                    className={` py-3 w-full rounded-lg text-white uppercase text-lg font-semibold
+                         ${user ? 'bg-pink-600 hover:bg-gray-800' : 'bg-slate-300'}`}>Join Camp</button>
+                        }
                     </div>
                 </div>
             </div>
+            {/* Join camp modal */}
             <div>
                 <Modal
                     open={open}
@@ -159,7 +173,7 @@ const UpcomingCampDetails = () => {
                                 </div>
                                 <div className='mt-4 w-full'>
                                     <h4 className='text-xl font-semibold'>Camp Fee</h4>
-                                    <input readOnly value={data?.campFees} type="text" {...register("fee")} name="fee"  className='py-3 pl-4 w-full border border-gray-300 font-bold mt-3 rounded-md' id="" />
+                                    <input readOnly value={data?.campFees} type="text" {...register("fee")} name="fee" className='py-3 pl-4 w-full border border-gray-300 font-bold mt-3 rounded-md' id="" />
                                 </div>
                             </div>
                             {/*  */}
@@ -180,6 +194,14 @@ const UpcomingCampDetails = () => {
                         <button className="bg-red-500 py-3 px-8 font-bold hover:bg-red-800 text-white rounded-md" onClick={handleClose}>Close</button>
                     </Box>
                 </Modal>
+            </div>
+            {/* Interested Upcoming Modal */}
+            <div>
+                <InterestedComingModal  
+                handleProfessionalClose ={handleProfessionalClose}
+                 setProfessionalOpen={setProfessionalOpen}
+                  professionalOpen={professionalOpen} 
+                  data={data}></InterestedComingModal>
             </div>
         </div>
     );

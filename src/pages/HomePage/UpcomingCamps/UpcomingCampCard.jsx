@@ -1,9 +1,14 @@
 /* eslint-disable react/prop-types */
 
 import { Link } from "react-router-dom";
+import useRegistrationCount from "../../../hooks/useRegistrationCount";
+import useProfessionalCount from "../../../hooks/useProfessionalCount";
 
 
 const UpcomingCampCard = ({ camp }) => {
+    const {data} = useRegistrationCount(camp?._id)
+    const {data: professionalCount} = useProfessionalCount(camp?._id)
+    console.log('prof', professionalCount);
     return (
         <div>
             <div className="relative flex max-w-[24rem] flex-col rounded-xl bg-gray-200 bg-clip-border text-gray-700 shadow-md">
@@ -17,8 +22,8 @@ const UpcomingCampCard = ({ camp }) => {
                         Camp Fee : ${camp?.campFees}</p>
                 </div>
                 <div className="flex justify-between font-semibold p-4 text-red-500">
-                    <p>Participants : {0}</p>
-                    <p>Interested Professionals : {0}</p>
+                    <p>Participants : {data?.totalRegistration}</p>
+                    <p>Interested Professionals : {professionalCount?.totalProfessionals}</p>
                 </div>
                 <div className="px-4 pb-3">
                     <h4 className="block font-sans text-2xl antialiased font-bold leading-snug tracking-normal text-blue-gray-900 uppercase text-purple-500">
