@@ -1,12 +1,12 @@
 /* eslint-disable react/prop-types */
 
 import { Link } from "react-router-dom";
-import useRegistrationCount from "../../../hooks/useRegistrationCount";
 import useProfessionalCount from "../../../hooks/useProfessionalCount";
+import useUpcomingRegistrationCount from "../../../hooks/useUpcomingRegistrationCount";
 
 
 const UpcomingCampCard = ({ camp }) => {
-    const {data} = useRegistrationCount(camp?._id)
+    const {data} = useUpcomingRegistrationCount(camp?._id)
     const {data: professionalCount} = useProfessionalCount(camp?._id)
     console.log('prof', professionalCount);
     return (
@@ -22,7 +22,7 @@ const UpcomingCampCard = ({ camp }) => {
                         Camp Fee : ${camp?.campFees}</p>
                 </div>
                 <div className="flex justify-between font-semibold p-4 text-red-500">
-                    <p>Participants : {data?.totalRegistration}</p>
+                    <p>Participants : {data?.totalUpcomingRegistration}</p>
                     <p>Interested Professionals : {professionalCount?.totalProfessionals}</p>
                 </div>
                 <div className="px-4 pb-3">

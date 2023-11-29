@@ -33,7 +33,7 @@ const UpcomingCampDetails = () => {
     const axiosPublic = useAxiosPublic();
     const axiosSecure = useAxiosSecure();
     const id = useParams()?.campId
-    const isProfessional = true;
+    const isProfessional = false;
 
 
     const { data } = useQuery({
@@ -66,7 +66,7 @@ const UpcomingCampDetails = () => {
         }
         console.log('new form', newRegister);
 
-        axiosSecure.post('/registered-participants', newRegister)
+        axiosSecure.post('/upcoming-registered-participants', newRegister)
             .then(res => {
                 console.log(res.data);
                 Swal.fire({
