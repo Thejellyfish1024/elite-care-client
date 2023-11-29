@@ -10,11 +10,12 @@ import { Divider } from '@mui/material';
 import ParticipantLinks from '../Participants/ParticipantLinks/ParticipantLinks';
 import OrganizerLinks from '../Organizers/OrganizerLinks/OrganizerLinks';
 import ProfessionalLinks from '../Professionals/ProfessionalLinks/ProfessionalLinks';
+import useOrganizer from '../../../hooks/useOrganizer';
 
 export default function DashboardDrawer() {
 
     const { user } = useAuth();
-    const isOrganizer = false;
+    const { isOrganizer } = useOrganizer();
     const isProfessional = false;
 
     const [state, setState] = React.useState({ left: false });
@@ -46,25 +47,43 @@ export default function DashboardDrawer() {
                     </NavLink>
 
                     {
-                        user && <>
-                            <NavLink className={({ isActive }) => isActive ? "text-[#48cae4]" : ""} to='/available-camps'>
-                                <li className="hover:bg-gray-300 p-1 pl-4 mb-2 ">Available Camps</li>
-                            </NavLink>
-                            <NavLink className={({ isActive }) => isActive ? "text-[#48cae4] hidden lg:block" : "hidden lg:block"} to='/dashboard'>
-                                <li className="hover:bg-gray-300 p-1 pl-4 mb-2 ">Dashboard</li>
-                            </NavLink>
-                        </>
+                        user &&
+                        <NavLink className={({ isActive }) => isActive ? "text-[#48cae4]" : ""} to='/available-camps'>
+                            <li className="hover:bg-gray-300 p-1 pl-4 mb-2 ">Available Camps</li>
+                        </NavLink>
                     }
+                    {
+                        isOrganizer &&
+                        <NavLink className={({ isActive }) => isActive ? "text-[#48cae4] hidden lg:block" : "hidden lg:block"}
+                            to='/dashboard/organizer-profile'>
+                            <li className="hover:bg-gray-300 p-1 pl-4 mb-2 ">Dashboard</li>
+                        </NavLink>
+                    }
+                    {
+                        isProfessional &&
+                        <NavLink className={({ isActive }) => isActive ? "text-[#48cae4] hidden lg:block" : "hidden lg:block"}
+                            to='/dashboard/professional-profile'>
+                            <li className="hover:bg-gray-300 p-1 pl-4 mb-2 ">Dashboard</li>
+                        </NavLink>
+                    }
+                    {
+                        !isOrganizer && !isProfessional && user &&
+                        <NavLink className={({ isActive }) => isActive ? "text-[#48cae4] hidden lg:block" : "hidden lg:block"}
+                            to='/dashboard/participant-profile'>
+                            <li className="hover:bg-gray-300 p-1 pl-4 mb-2 ">Dashboard</li>
+                        </NavLink>
+                    }
+
                     <NavLink className={({ isActive }) => isActive ? "text-[#48cae4]" : ""} to='/contact-us'>
                         <li className="hover:bg-gray-300 p-1 pl-4 mb-2 ">Contact Us</li>
                     </NavLink>
                     <Divider />
                     {
-                        isOrganizer &&  user &&
-                         <OrganizerLinks></OrganizerLinks> 
+                        isOrganizer &&
+                        <OrganizerLinks></OrganizerLinks>
                     }
                     {
-                        isProfessional && user &&
+                        isProfessional &&
                         <ProfessionalLinks></ProfessionalLinks>
                     }
                     {

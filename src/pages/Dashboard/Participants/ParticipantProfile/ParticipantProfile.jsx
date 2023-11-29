@@ -1,9 +1,9 @@
-
+import CommonProfile from "../../../Shared/CommonProfile/CommonProfile";
 
 const ParticipantProfile = () => {
     return (
         <div>
-            ParticipantProfile
+            <CommonProfile></CommonProfile>
         </div>
     );
 };

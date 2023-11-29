@@ -3,13 +3,14 @@ import OrganizerLinks from "../Organizers/OrganizerLinks/OrganizerLinks";
 import ParticipantLinks from "../Participants/ParticipantLinks/ParticipantLinks";
 import useAuth from "../../../hooks/useAuth";
 import ProfessionalLinks from "../Professionals/ProfessionalLinks/ProfessionalLinks";
+import useOrganizer from "../../../hooks/useOrganizer";
 
 
 const MainDashboard = () => {
 
     const {user} = useAuth();
 
-    const isOrganizer = true;
+    const {isOrganizer} = useOrganizer()
     const isProfessional = false;
 
     return (

@@ -7,12 +7,15 @@ import { useState } from 'react';
 import toast from 'react-hot-toast';
 import DashboardDrawer from '../../Dashboard/MainDashboard/DashboardDrawer';
 import useProfile from '../../../hooks/useProfile';
+import useOrganizer from '../../../hooks/useOrganizer';
 
 const NavBar = () => {
 
     const { user, logOut } = useAuth();
     const [showProfile, setShowProfile] = useState(false);
     const { data: profile } = useProfile(user?.email);
+    const { isOrganizer } = useOrganizer();
+    const isProfessional = false;
 
 
     const navLinks = <>
@@ -23,8 +26,21 @@ const NavBar = () => {
                 user && <>
                     <li><NavLink className={({ isActive }) => isActive ? "text-[#48cae4] border-b-2 p-1 border-[#48cae4]  font-bold" : " p-1"}
                         to='/available-camps'>Available Camps</NavLink></li>
-                    <li><NavLink className={({ isActive }) => isActive ? "text-[#48cae4] border-b-2 p-1 border-[#48cae4] font-bold" : " p-1"}
-                        to='/dashboard'>Dashboard</NavLink></li>
+                    {
+                        isOrganizer &&
+                        <li><NavLink className={({ isActive }) => isActive ? "text-[#48cae4] border-b-2 p-1 border-[#48cae4] font-bold" : " p-1"}
+                            to='/dashboard/organizer-profile'>Dashboard</NavLink></li>
+                    }
+                    {
+                        isProfessional &&
+                        <li><NavLink className={({ isActive }) => isActive ? "text-[#48cae4] border-b-2 p-1 border-[#48cae4] font-bold" : " p-1"}
+                            to='/dashboard/professional-profile'>Dashboard</NavLink></li>
+                    }
+                    {
+                        !isOrganizer && !isProfessional && user &&
+                        <li><NavLink className={({ isActive }) => isActive ? "text-[#48cae4] border-b-2 p-1 border-[#48cae4] font-bold" : " p-1"}
+                            to='/dashboard/participant-profile'>Dashboard</NavLink></li>
+                    }
                 </>
             }
             <li><NavLink className={({ isActive }) => isActive ? "text-[#48cae4] border-b-2 p-1 border-[#48cae4] font-bold" : " p-1"}
@@ -73,10 +89,21 @@ const NavBar = () => {
                                         <div className="flex justify-center w-full">
                                             <div>
                                                 {
-                                                    user?.photoURL ?
-                                                        <img src={user?.photoURL} className="w-16 h-16 rounded-full" alt="" /> :
-                                                        <FaUserCircle className='text-4xl'></FaUserCircle>
+                                                    profile?.image ?
+                                                        <img className='w-16 h-16 rounded-full' src={profile?.image} alt="not found" />
+                                                        :
+                                                        <div>
+                                                            {
+                                                                user?.photoURL ?
+                                                                    <img className='w-16 h-16 rounded-full' src={user?.photoURL} alt="not found" />
+                                                                    :
+                                                                    <FaUserCircle className='text-4xl'></FaUserCircle>
+
+                                                            }
+
+                                                        </div>
                                                 }
+
 
                                             </div>
                                         </div>
