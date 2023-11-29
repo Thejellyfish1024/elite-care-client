@@ -58,7 +58,7 @@ const SingleCamp = ({ camp }) => {
                     <p className="md:pl-5 pl-2 font-bold">Camp Fee : ${campFees}</p>
                 </div>
                 <Link to={`/camp-details/${camp?._id}`}>
-                    <button type="button" className="bg-gradient-to-r hover:from-green-400 hover:to-blue-500 from-pink-500 to-yellow-500 hover:scale-110
+                    <button type="button" className="bg-gradient-to-r hover:from-green-400 hover:to-blue-500 from-pink-500 to-yellow-500 hover:scale-110 hover:rounded-full
                 w-full text-center font-bold py-4 rounded-b-full">
                         See Camp Details
                     </button>

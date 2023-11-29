@@ -82,7 +82,7 @@ const AddCamp = () => {
         <div className="flex justify-center p-5">
             <div>
                 <h2 className="text-4xl font-bold text-center mb-10">Add a Camp</h2>
-                <div className="lg:w-[900px] md:w-[700px] p-12 bg-gray-600   rounded-md mb-16">
+                <div className="lg:w-[900px] md:w-[700px] md:p-12 bg-gray-600   rounded-md mb-16">
                     <form className=" p-4 lg:p-0" onSubmit={handleSubmit(onSubmit)}>
                         {/*  */}
                         <div className="flex flex-col md:flex-row gap-5 w-full">
@@ -184,7 +184,3 @@ const AddCamp = () => {
 };
 
 export default AddCamp;
-
-
-// , Image (Upload camp image using ImgBB or
-//     other hosting platform), , , , ,,, .
