@@ -5,11 +5,12 @@ import Swal from "sweetalert2";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 import useAuth from "../../hooks/useAuth";
 import { useQuery } from "@tanstack/react-query";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 
 const CheckoutForm = () => {
 
+    const navigate = useNavigate();
     const [error, setError] = useState('');
     const [clientSecret, setClientSecret] = useState('');
     const [transactionId, setTransactionId] = useState('');
@@ -20,7 +21,7 @@ const CheckoutForm = () => {
     const {id} = useParams()
     // console.log('id', id);
 
-    const {data , refetch} = useQuery({
+    const {data } = useQuery({
         queryKey : ['registeredCampPayment', id],
         queryFn: async () =>{
             const res = await axiosSecure.get(`/registered-participant/${id}`)
@@ -95,6 +96,7 @@ const CheckoutForm = () => {
             const payment = {
                 email: user?.email,
                 fee: campFee,
+                campId:data?.campId,
                 transactionId: paymentIntent.id,
                 date: new Date(),
 
@@ -111,6 +113,7 @@ const CheckoutForm = () => {
                     showConfirmButton: false,
                     timer: 1500
                 });
+                navigate('/dashboard/payment-history')
             }
         }
     }
