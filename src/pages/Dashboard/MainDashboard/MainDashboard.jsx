@@ -15,8 +15,8 @@ const MainDashboard = () => {
 
     return (
         <div className=" flex">
-            <div className="lg:block w-64  hidden  bg-[#dee2e6] pt-5 min-h-screen">
-                <ul className=" min-h-screen w-64 fixed font-bold">
+            <div className="lg:block w-64  hidden  bg-[#ced4da] pt-5 min-h-screen">
+                <ul className=" min-h-screen w-60 fixed font-bold">
                     {
                         isOrganizer &&  user &&
                          <OrganizerLinks></OrganizerLinks> 

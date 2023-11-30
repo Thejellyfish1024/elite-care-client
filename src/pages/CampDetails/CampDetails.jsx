@@ -77,8 +77,8 @@ const CampDetails = () => {
     }
 
     return (
-        <div className="my-16 min-h-[90vh]">
-            <div className="relative flex flex-col lg:flex-row min-h-[70vh] mt-10 w-full max-w-7xl mx-auto rounded-xl bg-white bg-clip-border text-gray-700 ">
+        <div className="lg:py-16 py-7 bg-white min-h-[90vh]">
+            <div className="relative flex  flex-col lg:flex-row min-h-[70vh] mt-10 w-full max-w-7xl mx-auto rounded-xl bg-white bg-clip-border text-gray-700 ">
                 <div className="relative p-2 md:p-4 lg:p-0 w-full lg:w-3/5 m-0 overflow-hidden text-gray-700 bg-white rounded-r-none 
                 shrink-0 rounded-xl bg-clip-border">
                     <img

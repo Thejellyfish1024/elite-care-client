@@ -1,93 +1,142 @@
-[
+
+
+  [
     {
-      "campName": "Heart Health Awareness Camp",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmOLNgpWR-DpWuQmAaIGpmFQSOEST9ArCpIJ-HwvqJNli8N3gQhh_pFrjsU8pl-Uc6L1s&usqp=CAU",
-      "campFees": 10,
-      "organizerEmail": "admin@gmail.com",
-      "scheduledDateTime": "2023-02-15, 09:00:00",
-      "venue": "City Community Center",
-      "specializedServicesProvided": ["Cardiac Consultation", "Blood Pressure Check", "Cholesterol Screening"],
-      "healthcareProfessionalsInAttendance": [
-        {"doctorName": "Dr. Smith", "specialty": "Cardiologist"},
-        {"doctorName": "Dr. Davis", "specialty": "Nutritionist"}
-      ],
-      "targetAudience": "Adults aged 40 and above",
-      "description": "Join us to learn about heart health, get personalized consultations, and take proactive steps towards a healthy heart."
-    },
-    {
-      "campName": "Pediatric Immunization Drive",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7Fu8KgRuE90HsKvitZ74Uc66UYiadF2AUBfAGq-l95qv3WFmag1T4bD1y-uZtCi-PL7A&usqp=CAU",
-      "campFees": 20,
-      "organizerEmail": "admin@gmail.com",
-      "scheduledDateTime": "2023-03-10, 11:30:00",
-      "venue": "Community Health Clinic",
-      "specializedServicesProvided": ["Childhood Vaccinations", "Pediatric Consultations"],
-      "healthcareProfessionalsInAttendance": [
-        {"doctorName": "Dr. Miller", "specialty": "Pediatrician"},
-        {"doctorName": "Dr. Baker", "specialty": "Pediatric Nurse"}
-      ],
-      "targetAudience": "Parents with infants and young children",
-      "description": "Ensure your child's health with free vaccinations and expert advice from our pediatric specialists."
-    },
-    {
-      "campName": "Diabetes Management Workshop",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDeCxd2fU1uy3Ja-gqRlgMSovVg9A1JfXp6g&usqp=CAU",
+      "campName": "Dental Health Checkup Camp",
+      "image": "https://cdn.siasat.com/wp-content/uploads/2022/01/heart-_JAN1.jpg",
       "campFees": 5,
       "organizerEmail": "admin@gmail.com",
-      "scheduledDateTime": "2023-04-20, 14:00:00",
-      "venue": "Wellness Center",
-      "specializedServicesProvided": ["Glucose Testing", "Nutritional Guidance", "Diabetes Education"],
+      "scheduledDateTime": "2023-08-12T13:45:00",
+      "venue": "Community Dental Clinic",
+      "specializedServicesProvided": ["Dental Exams", "Teeth Cleaning", "Oral Health Education"],
       "healthcareProfessionalsInAttendance": [
-        {"doctorName": "Dr. Davis", "specialty": "Endocrinologist"},
-        {"doctorName": "Dr. White", "specialty": "Dietitian"}
+        {"doctorName": "Dr. Evans", "speciality": "Dentist"},
+        {"doctorName": "Dr. Clark", "speciality": "Dental Hygienist"}
       ],
-      "targetAudience": "Individuals with diabetes and their families",
-      "description": "Empower yourself with knowledge and tools to manage diabetes effectively. Join our workshop for practical advice and support."
+      "targetAudience": "All age groups",
+      "description": "Maintain a bright smile! Join us for dental checkups, cleaning, and expert advice on oral hygiene."
     },
     {
-      "campName": "Women's Health Checkup Camp",
-      "image": "https://assets.thehansindia.com/h-upload/2020/06/17/977627-women-health-check-up-and-c.webp",
+      "campName": "Eye Care Awareness Workshop",
+      "image": "https://cdn.eyemyeye.com/desktop/images/eyetest/eyetest1.jpg",
+      "campFees": 50,
+      "organizerEmail": "admin@gmail.com",
+      "scheduledDateTime": "2023-09-05T15:30:00",
+      "venue": "Community Vision Center",
+      "specializedServicesProvided": ["Vision Screenings", "Eye Health Talks", "Eyeglass Consultations"],
+      "healthcareProfessionalsInAttendance": [
+        {"doctorName": "Dr. Turner", "speciality": "Ophthalmologist"},
+        {"doctorName": "Dr. Foster", "speciality": "Optometrist"}
+      ],
+      "targetAudience": "All age groups",
+      "description": "See clearly and protect your vision! Attend our workshop for eye screenings and valuable insights from eye care specialists."
+    },
+    {
+      "campName": "Nutrition and Wellness Expo",
+      "image": "https://5.imimg.com/data5/MU/LV/GLADMIN-13256860/health-camp-service.png",
       "campFees": 15,
       "organizerEmail": "admin@gmail.com",
-      "scheduledDateTime": "2023-05-08, 10:30:00",
-      "venue": "Women's Health Center",
-      "specializedServicesProvided": ["Pap Smears", "Breast Exams", "Gynecological Consultations"],
+      "scheduledDateTime": "2023-10-15T11:00:00",
+      "venue": "Community Wellness Center",
+      "specializedServicesProvided": ["Nutrition Consultations", "Fitness Assessments", "Healthy Cooking Demos"],
       "healthcareProfessionalsInAttendance": [
-        {"doctorName": "Dr. Anderson", "specialty": "Gynecologist"},
-        {"doctorName": "Dr. Thompson", "specialty": "Women's Health Specialist"}
+        {"doctorName": "Dr. Taylor", "speciality": "Nutritionist"},
+        {"doctorName": "Dr. Parker", "speciality": "Fitness Expert"}
       ],
-      "targetAudience": "Women of all ages",
-      "description": "Prioritize your well-being with comprehensive women's health checkups. Our experts are here to address your concerns and provide personalized care."
+      "targetAudience": "Everyone interested in wellness",
+      "description": "Explore the world of nutrition and fitness! Join our expo for personalized consultations and interactive sessions with wellness experts."
     },
     {
-      "campName": "Mental Health Awareness Session",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb_sgtsnDA0333kAG2LuvVXNMvS7wiUU2UZovg4DFqbOwUJXFmOzFMCpuQBBgNfC4vF9k&usqp=CAU",
-      "campFees": 13,
+      "campName": "Respiratory Health Seminar",
+      "image": "https://newznew.com/wp-content/uploads/2016/03/1-2.jpg",
+      "campFees": 20,
       "organizerEmail": "alamin102410@gmail.com",
-      "scheduledDateTime": "2023-06-15, 15:30:00",
-      "venue": "Community Counseling Center",
-      "specializedServicesProvided": ["Mental Health Talks", "Counseling Sessions", "Stress Assessments"],
+      "scheduledDateTime": "2023-11-08T14:30:00",
+      "venue": "Community Respiratory Clinic",
+      "specializedServicesProvided": ["Lung Function Tests", "Asthma Education", "Smoking Cessation Support"],
       "healthcareProfessionalsInAttendance": [
-        {"doctorName": "Dr. Carter", "specialty": "Psychiatrist"},
-        {"doctorName": "Dr. Brown", "specialty": "Licensed Counselor"}
+        {"doctorName": "Dr. Miller", "speciality": "Pulmonologist"},
+        {"doctorName": "Dr. Carter", "speciality": "Respiratory Therapist"}
       ],
-      "targetAudience": " all individuals interested in mental health",
-      "description": "Break the stigma and join us for an enlightening session on mental health. Discover resources and support available for your mental well-being."
+      "targetAudience": "Individuals with respiratory concerns",
+      "description": "Breathe easy and live well! Attend our seminar for respiratory health assessments and expert advice on lung care."
     },
     {
-      "campName": "Senior Wellness and Fitness Camp",
-      "image": "https://stanthonyskc.com/wp-content/uploads/2022/08/Staying-Active-in-an-Assisted-Living-Community.jpeg",
-      "campFees": 8,
+      "campName": "Community Blood Drive",
+      "image": "https://images.news18.com/ibnlive/uploads/2022/06/world-blood-donor-day-16551216994x3.jpg",
+      "campFees": 23,
+      "organizerEmail": "admin@gmail.com",
+      "scheduledDateTime": "2023-12-03T10:00:00",
+      "venue": "Community Blood Center",
+      "specializedServicesProvided": ["Blood Donation", "Blood Pressure Check", "Iron Levels Testing"],
+      "healthcareProfessionalsInAttendance": [
+        {"doctorName": "Dr. Johnson", "speciality": "Hematologist"},
+        {"doctorName": "Dr. White", "speciality": "Phlebotomist"}
+      ],
+      "targetAudience": "Healthy adults willing to donate blood",
+      "description": "Save lives by donating blood! Join our community blood drive and receive complimentary health screenings."
+    },
+    {
+      "campName": "Orthopedic Health Workshop",
+      "image": "https://gsbsmedicaltrust.org/wp-content/uploads/2021/12/dygnosist-gd414aa8a9_1280-750x465.jpg",
+      "campFees": 55,
+      "organizerEmail": "admin@gmail.com",
+      "scheduledDateTime": "2024-01-20T13:15:00",
+      "venue": "Community Orthopedic Center",
+      "specializedServicesProvided": ["Joint Assessments", "Orthopedic Consultations", "Physical Therapy Demonstrations"],
+      "healthcareProfessionalsInAttendance": [
+        {"doctorName": "Dr. Davis", "speciality": "Orthopedic Surgeon"},
+        {"doctorName": "Dr. Wilson", "speciality": "Physical Therapist"}
+      ],
+      "targetAudience": "Individuals with orthopedic concerns",
+      "description": "Care for your joints and bones! Attend our workshop for orthopedic assessments and insights from orthopedic specialists."
+    },
+    {
+      "campName": "Allergy Awareness Session",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG9lDmcAgTNPYrddL2-TdVsssGD_h1ZNKQL4yTaNlJ6eaUhgY_Col0MhX08HUwjLJ3rHg&usqp=CAU",
+      "campFees": 30,
+      "organizerEmail": "admin@gmail.com",
+      "scheduledDateTime": "2024-02-10T16:45:00",
+      "venue": "Community Allergy Clinic",
+      "specializedServicesProvided": ["Allergy Testing", "Allergen Avoidance Tips", "Consultations with Allergists"],
+      "healthcareProfessionalsInAttendance": [
+        {"doctorName": "Dr. Anderson", "speciality": "Allergist"},
+        {"doctorName": "Dr. Harris", "speciality": "Allergy Nurse"}
+      ],
+      "targetAudience": "Individuals with allergies or sensitivities",
+      "description": "Understand and manage your allergies! Join our awareness session for testing and guidance from allergy specialists."
+    },
+    {
+      "campName": "Geriatric Health Fair",
+      "image": "https://www.unthsc.edu/center-for-geriatrics/wp-content/uploads/sites/65/Health_web2.jpg",
+      "campFees": 15,
       "organizerEmail": "alamin102410@gmail.com",
-      "scheduledDateTime": "2023-07-25, 11:00:00",
+      "scheduledDateTime": "2024-03-18T11:30:00",
       "venue": "Senior Community Center",
-      "specializedServicesProvided": ["Physical Fitness Assessments", "Bone Density Testing", "Geriatric Consultations"],
+      "specializedServicesProvided": ["Senior Health Assessments", "Fall Risk Screenings", "Memory Checks"],
       "healthcareProfessionalsInAttendance": [
-        {"doctorName": "Dr. Wilson", "specialty": "Geriatrician"},
-        {"doctorName": "Dr. Moore", "specialty": "Physical Therapist"}
+        {"doctorName": "Dr. Moore", "speciality": "Geriatrician"},
+        {"doctorName": "Dr. Turner", "speciality": "Memory Specialist"}
       ],
-      "targetAudience": "Seniors aged 60 and above",
-      "description": "Stay active and age gracefully! Join our camp for personalized wellness assessments, fitness tips, and expert advice for senior health."
+      "targetAudience": "Seniors aged 65 and above",
+      "description": "Celebrate healthy aging! Join our health fair for assessments, screenings, and valuable information for senior well-being."
+    },
+    {
+      "campName": "Cancer Screening Clinic",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3i9v6zVfBuaJ6eAvGV_86jnyukTVsHrbqnPpPt0m3igb-HSFL_15-dTVU2pJWELhDb4w&usqp=CAU",
+      "campFees": 10,
+      "organizerEmail": "admin@gmail.com",
+      "scheduledDateTime": "2024-04-05T09:15:00",
+      "venue": "Community Cancer Center",
+      "specializedServicesProvided": ["Cancer Screenings", "Consultations with Oncologists", "Supportive Care Information"],
+      "healthcareProfessionalsInAttendance": [
+        {"doctorName": "Dr. Robinson", "speciality": "Oncologist"},
+        {"doctorName": "Dr. Turner", "speciality": "Oncology Nurse"},
+        {"doctorName": "Dr. Harris", "speciality": "Supportive Care Specialist"}
+      ],
+      "targetAudience": "Individuals concerned about cancer",
+      "description": "Early detection saves lives! Attend our cancer screening clinic for comprehensive screenings and expert guidance from oncology specialists."
     }
   ]
+  
   

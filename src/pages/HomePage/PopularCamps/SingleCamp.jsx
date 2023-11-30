@@ -11,8 +11,8 @@ const SingleCamp = ({ camp }) => {
     const {data} = useRegistrationCount(camp._id)
 
     return (
-        <div className="flex justify-center p-2 md:p-0">
-            <div className="lg:w-4/5 text-white bg-gradient-to-r md:w-3/5">
+        <div className="flex justify-center p-4 md:p-0">
+            <div className="lg:w-4/5 text-white bg-gradient-to-r md:w-3/5 w-full">
                 <div>
                 <h2 className=" bg-gradient-to-r from-[#f48c06] to-[#faa307] p-3 md:text-xl text-lg uppercase rounded-t-full font-bold text-center">
                     {campName}

@@ -6,7 +6,7 @@ import Footer from "../../pages/Shared/Footer/Footer";
 
 const Main = () => {
     return (
-        <div>
+        <div className="bg-slate-200">
             <NavBar></NavBar>
             <div className="pt-[88px]">
                 <Outlet></Outlet>
