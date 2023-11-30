@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Swal from "sweetalert2";
 
 
@@ -20,6 +21,9 @@ const ContactUs = () => {
 
     return (
         <div>
+             <Helmet>
+                <title>Elite Care || Contact Us</title>
+            </Helmet>
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:justify-around items-center mb-16">
                 {/* form */}
                 <div className="md:w-1/3 w-3/4 my-10">

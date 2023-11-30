@@ -121,7 +121,7 @@ const CommonProfile = () => {
 
                         <div className='text-center mt-10'>
                             <button className='hover:bg-[#52b788] bg-green-800 w-full p-2 text-white font-bold rounded-full'>
-                                Update
+                                Save
                             </button>
                         </div>
 

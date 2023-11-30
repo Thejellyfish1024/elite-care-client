@@ -28,7 +28,7 @@ const Testimonials = () => {
     console.log('reviews', testimonials);
 
     return (
-        <div className='max-w-7xl mx-auto my-16'>
+        <div className='max-w-7xl min-h-[80vh] mx-auto'>
             <h2 className='text-4xl font-bold text-center my-16'>Testimonials</h2>
             <Swiper navigation={true} modules={[Navigation]} classNameName="mySwiper">
 

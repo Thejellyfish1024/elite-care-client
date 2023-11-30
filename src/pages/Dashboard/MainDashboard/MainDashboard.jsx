@@ -5,6 +5,7 @@ import useAuth from "../../../hooks/useAuth";
 import ProfessionalLinks from "../Professionals/ProfessionalLinks/ProfessionalLinks";
 import useOrganizer from "../../../hooks/useOrganizer";
 import useProfessional from "../../../hooks/useProfessional";
+import { Helmet } from "react-helmet-async";
 
 
 const MainDashboard = () => {
@@ -16,6 +17,9 @@ const MainDashboard = () => {
 
     return (
         <div className=" flex">
+             <Helmet>
+                <title>Elite Care || Dashboard</title>
+            </Helmet>
             <div className="lg:block w-64  hidden  bg-[#ced4da] pt-5 min-h-screen">
                 <ul className=" min-h-screen w-60 fixed font-bold">
                     {

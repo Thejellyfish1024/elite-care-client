@@ -3,6 +3,7 @@ import Banner from "../Banner/Banner";
 import PopularCamps from "../PopularCamps/PopularCamps";
 import UpcomingCamps from "../UpcomingCamps/UpcomingCamps";
 import Testimonials from "../Testimonials/Testimonials";
+import NewsLetter from "../NewsLater/NewsLater";
 
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
             <PopularCamps></PopularCamps>
             <UpcomingCamps></UpcomingCamps>
             <Testimonials></Testimonials>
+            <NewsLetter></NewsLetter>
         </div>
     );
 };
