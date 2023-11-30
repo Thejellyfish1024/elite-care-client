@@ -6,6 +6,7 @@ import TableRow from '@mui/material/TableRow';
 import { useQuery } from '@tanstack/react-query';
 import useAxiosSecure from '../../../../hooks/useAxiosSecure';
 import Swal from 'sweetalert2';
+import { Link } from 'react-router-dom';
 
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -84,8 +85,18 @@ const RegisteredTableRow = ({ camp, refetch }) => {
                 <StyledTableCell align="right" sx={{ textAlign: 'center' }}>{data?.venue}</StyledTableCell>
                 <StyledTableCell align="right" sx={{ textAlign: 'center' }}>${data?.campFees}</StyledTableCell>
                 <StyledTableCell align="right" sx={{ textAlign: 'center' }}>
-                    <button disabled={camp?.payment === 'paid' ? true : false}
-                        className={` ${camp?.payment === 'paid' ? 'bg-green-500 ' : 'bg-red-500 hover:bg-red-800'} text-white py-2 px-4 rounded-lg`}>{camp?.payment}</button>
+                    {
+                        camp?.payment === 'paid' ?
+                            <p className='font-bold text-lg text-green-500'>Paid</p>
+                            :
+                            <Link to={`/dashboard/payment/${camp?._id}`}>
+                                <button
+                                    className={` ${camp?.payment === 'paid' ? 'bg-green-500 ' : 'bg-red-500 hover:bg-red-800'} text-white py-2 px-4 rounded-lg`}>{camp?.payment}</button>
+                            </Link>
+
+                    }
+
+
                 </StyledTableCell>
                 <StyledTableCell align="right" sx={{ textAlign: 'center' }}>
                     <button className={` ${camp?.status === 'confirmed' ? 'bg-green-500 ' : 'bg-red-500'} text-white py-2 px-4 rounded-lg`}>{camp?.status}</button>

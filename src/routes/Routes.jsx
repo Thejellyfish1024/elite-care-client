@@ -23,6 +23,7 @@ import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import PrivateRoute from "./PrivateRoute";
 import OrganizerRoute from "./OrganizerRoute";
 import UpcomingCampDetails from "../pages/HomePage/UpcomingCamps/UpcomingCampDetails";
+import Payment from "../pages/Payment/Payment";
 
 export const router = createBrowserRouter([
   {
@@ -80,6 +81,10 @@ export const router = createBrowserRouter([
           {
             path: '/dashboard/feedback-and-ratings',
             element: <FeedBack></FeedBack>
+          },
+          {
+            path : '/dashboard/payment/:id',
+            element : <Payment></Payment>
           },
 
           // 
