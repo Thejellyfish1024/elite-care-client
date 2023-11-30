@@ -46,7 +46,7 @@ const ManageUpcomingCamps = () => {
                             <StyledTableCell align="right" sx={{ textAlign: 'center' }}>Scheduled Date</StyledTableCell>
                             <StyledTableCell align="right" sx={{ textAlign: 'center' }}>Location</StyledTableCell>
                             <StyledTableCell align="right" sx={{ textAlign: 'center' }}>Camp Fee</StyledTableCell>
-                            <StyledTableCell align="right" sx={{ textAlign: 'center' }}>Registered Participants</StyledTableCell>
+                            <StyledTableCell align="right" sx={{ textAlign: 'center' }}>Interested Participants</StyledTableCell>
                             <StyledTableCell align="right" sx={{ textAlign: 'center' }}>Interested Professionals</StyledTableCell>
                             <StyledTableCell align="right" sx={{ textAlign: 'center' }}>Action</StyledTableCell>
                         </TableRow>

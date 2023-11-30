@@ -70,7 +70,7 @@ const AddUpcomingCamp = () => {
             })
     }
     return (
-        <div className="flex justify-center p-5">
+        <div className="flex justify-center p-5 ">
             <div>
                 <h2 className="text-4xl font-bold text-center mb-10">Add Upcoming Camp</h2>
                 <div className="lg:w-[900px] md:w-[700px]  md:p-12   rounded-md mb-16">
@@ -90,7 +90,7 @@ const AddUpcomingCamp = () => {
                         </div>
 
                         {/*  */}
-                        <div className="border border-white p-5 my-4">
+                        <div className="border border-gray-400 p-5 my-4">
                             <h4 className='text-xl font-semibold '>Specialized Services Provided</h4>
                             <ol className="list-decimal">
                                 <li className="flex flex-col md:flex-row md:gap-5">

@@ -38,13 +38,13 @@ const Testimonials = () => {
                             <div
                                 className="relative bg-[#457b9d] py-5 px-10 flex w-3/4 flex-col rounded-xl bg-clip-border text-white shadow-none">
                                 <div className='mb-5'>
-                                    <h3 className='text-3xl font-semibold italic mb-2'>Participants Testimonials</h3>
+                                    <h3 className='md:text-3xl text-2xl font-semibold italic mb-2'>Participants Testimonials</h3>
                                     <Rating sx={{ color: 'orange' }} name="read-only" value={testimonial?.ratings} readOnly />
                                 </div>
 
                                 <h4 className='text-lg font-bold mb-2'>Camp Name : {testimonial?.campName}</h4>
                                 <div className="p-0 pl-6 mb-6">
-                                    <p className="block  w-3/5 text-base antialiased  leading-relaxed text-inherit">
+                                    <p className="block  md:w-3/5 text-base antialiased  leading-relaxed text-inherit">
                                         {testimonial?.review}
                                     </p>
                                 </div>

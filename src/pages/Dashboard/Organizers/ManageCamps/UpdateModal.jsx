@@ -101,13 +101,13 @@ const UpdateModal = ({ open, setOpen, camp, refetch }) => {
                                 <li className="flex flex-col md:flex-row md:gap-5 mb-4 md:mb-0">
                                     <input type="text" defaultValue={camp?.healthcareProfessionalsInAttendance[0]?.doctorName} {...register("firstDoctor", { required: true })} name="firstDoctor" placeholder='Add doctor name' className='py-2 pl-4 w-full border border-gray-300 mt-3 rounded-md' id="" />
 
-                                    <input type="text" defaultValue={camp?.healthcareProfessionalsInAttendance[0]?.specialty}  {...register("firstSpecialty", { required: true })} name="firstSpecialty" placeholder="Add doctor's specialty" className='py-2 pl-4 w-full border border-gray-300 mt-3 rounded-md' id="" />
+                                    <input type="text" defaultValue={camp?.healthcareProfessionalsInAttendance[0]?.specialty}  {...register("firstSpecialty")} name="firstSpecialty" placeholder="Add doctor's specialty" className='py-2 pl-4 w-full border border-gray-300 mt-3 rounded-md' id="" />
 
                                 </li>
                                 <li className="flex md:gap-5  flex-col md:flex-row">
-                                    <input type="text" defaultValue={camp?.healthcareProfessionalsInAttendance[1]?.doctorName} {...register("secondDoctor", { required: true })} name="secondDoctor" placeholder='Add doctor name' className='py-2 pl-4 w-full border border-gray-300 mt-3 rounded-md' id="" />
+                                    <input type="text" defaultValue={camp?.healthcareProfessionalsInAttendance[1]?.doctorName} {...register("secondDoctor")} name="secondDoctor" placeholder='Add doctor name' className='py-2 pl-4 w-full border border-gray-300 mt-3 rounded-md' id="" />
 
-                                    <input type="text" defaultValue={camp?.healthcareProfessionalsInAttendance[1]?.specialty} {...register("secondSpecialty", { required: true })} name="secondSpecialty" placeholder="Add doctor's specialty" className='py-2 pl-4 w-full border border-gray-300 mt-3 rounded-md' id="" />
+                                    <input type="text" defaultValue={camp?.healthcareProfessionalsInAttendance[1]?.specialty} {...register("secondSpecialty")} name="secondSpecialty" placeholder="Add doctor's specialty" className='py-2 pl-4 w-full border border-gray-300 mt-3 rounded-md' id="" />
                                 </li>
                             </ol>
                         </div>

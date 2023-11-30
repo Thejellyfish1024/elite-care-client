@@ -8,6 +8,7 @@ import toast from 'react-hot-toast';
 import DashboardDrawer from '../../Dashboard/MainDashboard/DashboardDrawer';
 import useProfile from '../../../hooks/useProfile';
 import useOrganizer from '../../../hooks/useOrganizer';
+import useProfessional from '../../../hooks/useProfessional';
 
 const NavBar = () => {
 
@@ -15,7 +16,7 @@ const NavBar = () => {
     const [showProfile, setShowProfile] = useState(false);
     const { data: profile } = useProfile(user?.email);
     const { isOrganizer } = useOrganizer();
-    const isProfessional = false;
+    const {isProfessional} = useProfessional();
 
 
     const navLinks = <>

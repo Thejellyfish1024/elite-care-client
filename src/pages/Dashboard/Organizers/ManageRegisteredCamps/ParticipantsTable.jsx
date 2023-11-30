@@ -6,6 +6,7 @@ import { useQuery } from '@tanstack/react-query';
 import useAxiosPublic from '../../../../hooks/useAxiosPublic';
 import Swal from 'sweetalert2';
 import useAxiosSecure from '../../../../hooks/useAxiosSecure';
+import { useState } from 'react';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
@@ -27,7 +28,9 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
     },
 }));
 
-const ParticipantsTable = ({ participant , refetch}) => {
+const ParticipantsTable = ({ participant, refetch }) => {
+
+    const [cancel, setCancel] = useState('Cancel');
 
     const axiosPublic = useAxiosPublic()
     const axiosSecure = useAxiosSecure();
@@ -39,6 +42,27 @@ const ParticipantsTable = ({ participant , refetch}) => {
         }
     })
     // console.log('camp', camp);
+
+    const handleCancel = () => {
+        Swal.fire({
+            title: "You Sure?",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, Cancel it!"
+        }).then(async (result) => {
+            if (result.isConfirmed) {
+                setCancel('Cancelled')
+                Swal.fire({
+                    title: "Cancelled!",
+                    icon: "success"
+                });
+
+            }
+        });
+
+    }
 
 
     const handlePending = () => {
@@ -86,8 +110,8 @@ const ParticipantsTable = ({ participant , refetch}) => {
                     <button onClick={handlePending} className={` ${participant?.status === 'confirmed' ? 'bg-green-500 ' : 'bg-red-500'} text-white py-2 px-4 rounded-lg`}>{participant?.status}</button>
                 </StyledTableCell>
                 <StyledTableCell align="right" sx={{ textAlign: 'center' }}>
-                    <button className={`bg-red-600  text-white py-2 px-4 rounded-lg 
-                    ${participant?.payment === 'paid' ? '' : 'hidden'}`}>Cancel</button>
+                    <button onClick={handleCancel} className={`bg-red-600  text-white py-2 px-4 rounded-lg 
+                    ${participant?.payment === 'paid' ? '' : 'hidden'}`}>{cancel}</button>
                 </StyledTableCell>
             </StyledTableRow>
         </>

@@ -11,12 +11,13 @@ import ParticipantLinks from '../Participants/ParticipantLinks/ParticipantLinks'
 import OrganizerLinks from '../Organizers/OrganizerLinks/OrganizerLinks';
 import ProfessionalLinks from '../Professionals/ProfessionalLinks/ProfessionalLinks';
 import useOrganizer from '../../../hooks/useOrganizer';
+import useProfessional from '../../../hooks/useProfessional';
 
 export default function DashboardDrawer() {
 
     const { user } = useAuth();
     const { isOrganizer } = useOrganizer();
-    const isProfessional = false;
+    const {isProfessional} = useProfessional()
 
     const [state, setState] = React.useState({ left: false });
 

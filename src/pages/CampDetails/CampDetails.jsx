@@ -39,7 +39,7 @@ const CampDetails = () => {
         }
     })
 
-    // console.log('data', data);
+    console.log('popular', data);
 
     const { register, handleSubmit, formState: { errors } } = useForm()
 

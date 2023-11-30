@@ -4,6 +4,7 @@ import ParticipantLinks from "../Participants/ParticipantLinks/ParticipantLinks"
 import useAuth from "../../../hooks/useAuth";
 import ProfessionalLinks from "../Professionals/ProfessionalLinks/ProfessionalLinks";
 import useOrganizer from "../../../hooks/useOrganizer";
+import useProfessional from "../../../hooks/useProfessional";
 
 
 const MainDashboard = () => {
@@ -11,7 +12,7 @@ const MainDashboard = () => {
     const {user} = useAuth();
 
     const {isOrganizer} = useOrganizer()
-    const isProfessional = false;
+    const {isProfessional} = useProfessional()
 
     return (
         <div className=" flex">

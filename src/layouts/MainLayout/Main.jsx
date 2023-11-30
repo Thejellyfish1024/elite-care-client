@@ -8,7 +8,7 @@ const Main = () => {
     return (
         <div className="bg-slate-200">
             <NavBar></NavBar>
-            <div className="pt-[88px]">
+            <div className="pt-[88px] min-h-screen">
                 <Outlet></Outlet>
             </div>
             <Footer></Footer>

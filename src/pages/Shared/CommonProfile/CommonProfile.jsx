@@ -31,6 +31,7 @@ const CommonProfile = () => {
         }).then(async (result) => {
             if (result.isConfirmed) {
                 let image = profile?.image || null;
+                // console.log('key', image_hosting_key);
                 if (data?.image[0]) {
                     const imageFile = { image: data.image[0] }
                     const res = await axiosPublic.post(image_hosting_api, imageFile, {
@@ -71,7 +72,7 @@ const CommonProfile = () => {
 
     return (
         <div className="">
-            <div className="mt-6">
+            <div className="my-6">
                 <h2 className="text-4xl font-bold text-center mb-10">My Profile</h2>
                 <form onSubmit={handleSubmit(onSubmit)} className="md:flex gap-8 lg:w-3/5 w-4/5 mx-auto items-center">
                     <div className="flex flex-col items-center">
@@ -84,7 +85,7 @@ const CommonProfile = () => {
                                         user?.photoURL ?
                                             <img className='w-60 h-60 rounded-full' src={user?.photoURL} alt="not found" />
                                             :
-                                            <FaUserCircle className='text-4xl'></FaUserCircle>
+                                            <FaUserCircle className='text-9xl'></FaUserCircle>
 
                                     }
 
@@ -97,7 +98,9 @@ const CommonProfile = () => {
                         </div>
                         <div className="mt-4 space-y-2">
                             <p className="font-bold">Change Profile Picture</p>
-                            <input type="file" {...register("image")} name="image" id="" />
+                            <p className='p-2 bg-slate-300 rounded-md'>
+                                <input type="file" {...register("image")} name="image" id="" />
+                            </p>
                         </div>
                     </div>
                     <div className="flex-grow">

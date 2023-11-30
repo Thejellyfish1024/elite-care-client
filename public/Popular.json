@@ -1,0 +1,102 @@
+
+[
+    {
+      "campName": "Respiratory Health Seminar",
+      "campId": "65685eb0b18e7f9a524599a0",
+      "image": "https://newznew.com/wp-content/uploads/2016/03/1-2.jpg",
+      "campFees": 20,
+      "organizerEmail": "alamin102410@gmail.com",
+      "scheduledDateTime": "2023-11-08T14:30:00",
+      "venue": "Community Respiratory Clinic",
+      "specializedServicesProvided": ["Lung Function Tests", "Asthma Education", "Smoking Cessation Support"],
+      "healthcareProfessionalsInAttendance": [
+        {"doctorName": "Dr. Miller", "speciality": "Pulmonologist"},
+        {"doctorName": "Dr. Carter", "speciality": "Respiratory Therapist"}
+      ],
+      "targetAudience": "Individuals with respiratory concerns",
+      "description": "Breathe easy and live well! Attend our seminar for respiratory health assessments and expert advice on lung care."
+    },
+    {
+      "campName": "Community Blood Drive",
+      "campId": "65685eb0b18e7f9a524599a1",
+      "image": "https://images.news18.com/ibnlive/uploads/2022/06/world-blood-donor-day-16551216994x3.jpg",
+      "campFees": 23,
+      "organizerEmail": "admin@gmail.com",
+      "scheduledDateTime": "2023-12-03T10:00:00",
+      "venue": "Community Blood Center",
+      "specializedServicesProvided": ["Blood Donation", "Blood Pressure Check", "Iron Levels Testing"],
+      "healthcareProfessionalsInAttendance": [
+        {"doctorName": "Dr. Johnson", "speciality": "Hematologist"},
+        {"doctorName": "Dr. White", "speciality": "Phlebotomist"}
+      ],
+      "targetAudience": "Healthy adults willing to donate blood",
+      "description": "Save lives by donating blood! Join our community blood drive and receive complimentary health screenings."
+    },
+    {
+      "campName": "Orthopedic Health Workshop",
+      "campId": "65685eb0b18e7f9a524599a2",
+      "image": "https://gsbsmedicaltrust.org/wp-content/uploads/2021/12/dygnosist-gd414aa8a9_1280-750x465.jpg",
+      "campFees": 55,
+      "organizerEmail": "admin@gmail.com",
+      "scheduledDateTime": "2024-01-20T13:15:00",
+      "venue": "Community Orthopedic Center",
+      "specializedServicesProvided": ["Joint Assessments", "Orthopedic Consultations", "Physical Therapy Demonstrations"],
+      "healthcareProfessionalsInAttendance": [
+        {"doctorName": "Dr. Davis", "speciality": "Orthopedic Surgeon"},
+        {"doctorName": "Dr. Wilson", "speciality": "Physical Therapist"}
+      ],
+      "targetAudience": "Individuals with orthopedic concerns",
+      "description": "Care for your joints and bones! Attend our workshop for orthopedic assessments and insights from orthopedic specialists."
+    },
+    {
+      "campName": "Allergy Awareness Session",
+      "campId": "65685eb0b18e7f9a524599a3",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG9lDmcAgTNPYrddL2-TdVsssGD_h1ZNKQL4yTaNlJ6eaUhgY_Col0MhX08HUwjLJ3rHg&usqp=CAU",
+      "campFees": 30,
+      "organizerEmail": "admin@gmail.com",
+      "scheduledDateTime": "2024-02-10T16:45:00",
+      "venue": "Community Allergy Clinic",
+      "specializedServicesProvided": ["Allergy Testing", "Allergen Avoidance Tips", "Consultations with Allergists"],
+      "healthcareProfessionalsInAttendance": [
+        {"doctorName": "Dr. Anderson", "speciality": "Allergist"},
+        {"doctorName": "Dr. Harris", "speciality": "Allergy Nurse"}
+      ],
+      "targetAudience": "Individuals with allergies or sensitivities",
+      "description": "Understand and manage your allergies! Join our awareness session for testing and guidance from allergy specialists."
+    },
+    {
+      "campName": "Geriatric Health Fair",
+      "campId": "65685eb0b18e7f9a524599a4",
+      "image": "https://www.unthsc.edu/center-for-geriatrics/wp-content/uploads/sites/65/Health_web2.jpg",
+      "campFees": 15,
+      "organizerEmail": "alamin102410@gmail.com",
+      "scheduledDateTime": "2024-03-18T11:30:00",
+      "venue": "Senior Community Center",
+      "specializedServicesProvided": ["Senior Health Assessments", "Fall Risk Screenings", "Memory Checks"],
+      "healthcareProfessionalsInAttendance": [
+        {"doctorName": "Dr. Moore", "speciality": "Geriatrician"},
+        {"doctorName": "Dr. Turner", "speciality": "Memory Specialist"}
+      ],
+      "targetAudience": "Seniors aged 65 and above",
+      "description": "Celebrate healthy aging! Join our health fair for assessments, screenings, and valuable information for senior well-being."
+    },
+    {
+      "campName": "Cancer Screening Clinic",
+      "campId": "65685eb0b18e7f9a524599a5",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3i9v6zVfBuaJ6eAvGV_86jnyukTVsHrbqnPpPt0m3igb-HSFL_15-dTVU2pJWELhDb4w&usqp=CAU",
+      "campFees": 10,
+      "organizerEmail": "admin@gmail.com",
+      "scheduledDateTime": "2024-04-05T09:15:00",
+      "venue": "Community Cancer Center",
+      "specializedServicesProvided": ["Cancer Screenings", "Consultations with Oncologists", "Supportive Care Information"],
+      "healthcareProfessionalsInAttendance": [
+        {"doctorName": "Dr. Robinson", "speciality": "Oncologist"},
+        {"doctorName": "Dr. Turner", "speciality": "Oncology Nurse"},
+        {"doctorName": "Dr. Harris", "speciality": "Supportive Care Specialist"}
+      ],
+      "targetAudience": "Individuals concerned about cancer",
+      "description": "Early detection saves lives! Attend our cancer screening clinic for comprehensive screenings and expert guidance from oncology specialists."
+    }
+  ]
+  
+  
