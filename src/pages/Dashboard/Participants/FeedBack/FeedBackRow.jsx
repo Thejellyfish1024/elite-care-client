@@ -8,6 +8,7 @@ import Rating from '@mui/material/Rating';
 import StarIcon from '@mui/icons-material/Star';
 import useAuth from "../../../../hooks/useAuth";
 import Swal from "sweetalert2";
+import useProfile from "../../../../hooks/useProfile";
 
 
 const style = {
@@ -46,8 +47,10 @@ const FeedBackRow = ({ payment }) => {
     const [hover, setHover] = useState(-1);
 
     const { user } = useAuth();
+    const {data: profile } = useProfile(user?.email);
 
     const axiosSecure = useAxiosSecure();
+   
 
     const { data: attendedCamp } = useQuery({
         queryKey: ['attendedCamp', payment?._id],
@@ -57,6 +60,13 @@ const FeedBackRow = ({ payment }) => {
         }
     })
     // console.log('camp details', attendedCamp);
+    let reviewerImage = user?.photoURL;
+
+    // console.log('profile image', profile);
+    if(profile?.image){
+        reviewerImage = profile?.image;
+    }
+
 
 
     const { register, handleSubmit, formState: { errors } } = useForm()
@@ -67,6 +77,9 @@ const FeedBackRow = ({ payment }) => {
             review: details?.review,
             ratings: value,
             reviewTime : new Date().valueOf(),
+            reviewDate : new Date(),
+            reviewerName : user?.displayName,
+            reviewerImage : reviewerImage,
             campId: attendedCamp?._id,
             campName: attendedCamp?.campName,
             scheduledDateTime: attendedCamp?.scheduledDateTime,
